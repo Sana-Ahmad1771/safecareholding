@@ -96,9 +96,6 @@ const TrustedBrands = () => {
 
         {/* First Row: Right to Left */}
         <LogoSlider brands={brands} direction="left" speed={30} />
-
-        {/* Second Row: Left to Right */}
-        <LogoSlider brands={brands} direction="right" speed={35} />
       </div>
     </section>
   );
