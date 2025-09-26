@@ -10,14 +10,14 @@ const OurBrands = () => {
         backgroundImage: "url('/ourbrands-bg.png')",
       }}
     >
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-end gap-10 lg:gap-20">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
         {/* Text Section */}
-        <div className="flex-1 space-y-6 text-white max-w-2xl">
+        <div className="lg:w-3/5 w-full space-y-6 text-white text-center lg:text-left">
           <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
             Our Brands
           </h2>
-          <div className="border bg-white border-white w-12 h-1 mb-4"></div>
-          <p className="text-base sm:text-lg leading-relaxed">
+          <div className="border bg-white border-white w-12 h-1 mx-auto lg:mx-0 mb-4"></div>
+          <p className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
             At Safecare Holding Company, we are committed to transforming the
             healthcare landscape by providing innovative solutions and
             exceptional customer experiences. With a diverse portfolio of
@@ -28,10 +28,10 @@ const OurBrands = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="flex-1 flex gap-4 max-w-2xl">
-          {/* Card 1 - Safecare Holding Company */}
+        <div className="lg:w-1/2 w-full flex lg:flex-nowrap justify-center flex-wrap lg:gap-6 gap-2">
+          {/* Card 1 */}
           <motion.div
-            className="relative w-[220px] sm:w-[260px] lg:w-[300px] h-[280px] sm:h-[320px] rounded-2xl overflow-hidden cursor-pointer"
+            className="relative w-full sm:w-[260px] lg:w-[300px] h-[280px] sm:h-[320px] rounded-2xl overflow-hidden cursor-pointer"
             whileHover="hover"
             initial="rest"
             animate="rest"
@@ -39,18 +39,13 @@ const OurBrands = () => {
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/card-1.png')",
-              }}
+              style={{ backgroundImage: "url('/card-1.png')" }}
             />
 
             {/* Overlay */}
             <motion.div
               className="absolute inset-0 bg-white"
-              variants={{
-                rest: { opacity: 0 },
-                hover: { opacity: 1 },
-              }}
+              variants={{ rest: { opacity: 0 }, hover: { opacity: 1 } }}
               transition={{ duration: 0.3 }}
             />
 
@@ -67,7 +62,7 @@ const OurBrands = () => {
             </motion.div>
 
             {/* Hover Content */}
-           <motion.div
+            <motion.div
               className="absolute inset-0 p-6 text-dark-2 flex flex-col justify-between"
               variants={{
                 rest: { opacity: 0, y: 20 },
@@ -76,12 +71,14 @@ const OurBrands = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
             >
               <div>
-                <h3 className="text-xl font-bold mt-1">Safecare Holding Company</h3>
+                <h3 className="text-xl font-bold mt-1">
+                  Safecare Holding Company
+                </h3>
                 <p className="text-sm leading-relaxed mt-4">
-                  Safecare Holding company is your premier destination for healthcare
-                  products and medical supplies. We offer a wide range of
-                  high-quality products with convenient online shopping and fast
-                  delivery to meet all your healthcare needs.
+                  Safecare Holding company is your premier destination for
+                  healthcare products and medical supplies. We offer a wide
+                  range of high-quality products with convenient online shopping
+                  and fast delivery to meet all your healthcare needs.
                 </p>
               </div>
 
@@ -91,9 +88,9 @@ const OurBrands = () => {
             </motion.div>
           </motion.div>
 
-          {/* Card 2 - Jurhy Online Store */}
+          {/* Card 2 */}
           <motion.div
-            className="relative w-[220px] sm:w-[260px] lg:w-[300px] h-[280px] sm:h-[320px] rounded-2xl overflow-hidden cursor-pointer"
+            className="relative w-full sm:w-[260px] lg:w-[300px] h-[280px] sm:h-[320px] rounded-2xl overflow-hidden cursor-pointer"
             whileHover="hover"
             initial="rest"
             animate="rest"
@@ -101,18 +98,13 @@ const OurBrands = () => {
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/card-2.png')",
-              }}
+              style={{ backgroundImage: "url('/card-2.png')" }}
             />
 
             {/* Overlay */}
             <motion.div
               className="absolute inset-0 bg-white"
-              variants={{
-                rest: { opacity: 0 },
-                hover: { opacity: 1 },
-              }}
+              variants={{ rest: { opacity: 0 }, hover: { opacity: 1 } }}
               transition={{ duration: 0.3 }}
             />
 

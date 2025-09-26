@@ -12,7 +12,7 @@ const AboutUs = () => {
             alt="About Us"
             width={600}
             height={400}
-            className="w-full max-w-[500px] h-auto max-h-[691px] object-contain z-40 absolute bottom-0 top-2"
+            className="w-full max-w-[500px] h-auto max-h-[691px] object-contain lg:z-40 lg:absolute bottom-0 top-2"
           />
         </div>
 
