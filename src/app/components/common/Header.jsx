@@ -166,7 +166,7 @@ const Header = () => {
         {/* Mobile View */}
         <div className="lg:hidden relative">
           <button onClick={toggleMenu}>
-            {!isMenuOpen && <AlignRight size={30} color={"#1E3D69"} />}
+            {!isMenuOpen && <AlignRight size={30} color={"#1EB7B1"} />}
           </button>
 
           <AnimatePresence>
@@ -176,9 +176,9 @@ const Header = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="fixed inset-0 bg-white z-50 px-6 sm:pt-10"
+                className="fixed inset-0 bg-white z-50 px-6 sm:pt-20"
               >
-                <div className="flex justify-between items-center mb-1">
+                <div className="flex justify-between items-center my-5">
                   <a href="/">
                     <Image
                       src={Logo}
@@ -189,7 +189,7 @@ const Header = () => {
                     />
                   </a>
                   <button onClick={closeMenu}>
-                    <IoCloseSharp size={30} color={"#1E3D69"} />
+                    <IoCloseSharp size={30} color={"#1EB7B1"} />
                   </button>
                 </div>
                 <hr className="mb-6 text-primary" />

@@ -6,6 +6,8 @@ import OurBrands from './components/pages/home/OurBrands.jsx';
 import QualityProducts from './components/pages/home/QualityProducts.jsx';
 import ProductsServices from './components/pages/home/ProductsServices.jsx';
 import SpecialServices from './components/pages/home/SpecialServices.jsx';
+import Footer from './components/common/Footer.jsx';
+import TechnologyGrid from './components/pages/home/Technology.jsx';
 // import Testing from './components/pages/home/testing.jsx';
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
     <ProductsServices />
     <SpecialServices />
     {/* <Testing /> */}
+    <TechnologyGrid />
+    <Footer />
     </>
   );
 }
