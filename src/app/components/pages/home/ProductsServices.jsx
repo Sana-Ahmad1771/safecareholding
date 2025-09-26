@@ -42,7 +42,7 @@ const ProductsServices = () => {
           <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
             Products & Services
           </h2>
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center">
             <div className="w-[244px] h-0.5 bg-gray-4 "></div>
           </div>
           <p className="text-base sm:text-lg leading-relaxed">
@@ -53,22 +53,39 @@ const ProductsServices = () => {
 
         {/* Cards Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl border border-gray-5 shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col"
-            >
-              <div className="mb-4">
-                <div className="flex flex-col gap-[30px] mb-4">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <div className="w-[269px] h-0.5 bg-gray-4 opacity-[0.3]  "></div>
+          {products.map((item, index) => {
+            const isRespiratory = item.title === "Respiratory Consumables";
+            return (
+              <div
+                key={index}
+                className={`rounded-xl border border-gray-5 shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col ${
+                  isRespiratory ? "bg-primary text-white" : "bg-white"
+                }`}
+              >
+                <div className="mb-4">
+                  <div className="flex flex-col gap-[30px] mb-4">
+                    <h3 className="text-xl font-semibold mb-2">
+                      {item.title}
+                    </h3>
+                    <div
+                      className={`w-[269px] h-0.5 ${
+                        isRespiratory ? "bg-white/50" : "bg-gray-4 opacity-30"
+                      }`}
+                    ></div>
+                  </div>
                 </div>
+                <p
+                  className={`text-sm sm:text-base leading-relaxed ${
+                    isRespiratory
+                      ? "text-white/90"
+                      : "text-dark-2/80"
+                  }`}
+                >
+                  {item.description}
+                </p>
               </div>
-              <p className="text-sm sm:text-base leading-relaxed text-dark-2/80">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
