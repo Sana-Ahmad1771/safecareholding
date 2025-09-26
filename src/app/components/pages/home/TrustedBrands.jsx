@@ -1,32 +1,31 @@
 "use client";
-
 import { motion } from "framer-motion";
-import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
 
-// ================= Slider Component =================
-function LogoSlider({ brands, direction = "left", speed = 30 }) {
+// ================= Horizontal Slider =================
+function HorizontalSlider({ brands, direction = "left", speed = 30 }) {
   const containerRef = useRef(null);
   const [distance, setDistance] = useState(0);
 
   useEffect(() => {
     if (containerRef.current) {
-      setDistance(containerRef.current.scrollWidth / 2); 
-      // half of duplicated list
+      const containerWidth = containerRef.current.scrollWidth;
+      setDistance(containerWidth / 2); 
     }
   }, [brands]);
 
   const brandList = [...brands, ...brands]; // duplicate for seamless loop
 
   return (
-    <div className="relative overflow-hidden w-full py-4">
-      {/* Left fade */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-12 sm:w-16 z-10 bg-gradient-to-r from-body via-body/70 to-transparent" />
-      {/* Right fade */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-12 sm:w-16 z-10 bg-gradient-to-l from-body via-body/70 to-transparent" />
+    <div className="relative overflow-hidden w-full py-3 sm:py-4 md:py-5">
+      {/* Gradient Overlays - Responsive widths */}
+      <div className="pointer-events-none absolute top-0 left-0 h-full w-8 sm:w-12 md:w-16 lg:w-20 z-20 bg-gradient-to-r from-body to-transparent" />
+      <div className="pointer-events-none absolute top-0 right-0 h-full w-8 sm:w-12 md:w-16 lg:w-20 z-20 bg-gradient-to-l from-body to-transparent" />
 
       <motion.div
         ref={containerRef}
-        className="flex items-center gap-10 sm:gap-16"
+        className="flex items-center gap-6 sm:gap-10 md:gap-12 lg:gap-16"
         style={{ willChange: "transform" }}
         animate={{ x: direction === "left" ? [0, -distance] : [-distance, 0] }}
         transition={{
@@ -41,12 +40,15 @@ function LogoSlider({ brands, direction = "left", speed = 30 }) {
         {brandList.map((brand, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center"
+            className="flex-shrink-0 h-8 sm:h-10 md:h-12 w-20 sm:w-28 md:w-32 flex items-center justify-center"
           >
-            <img
+            <Image
               src={brand.logo}
               alt={brand.name}
-              className="h-full max-w-full object-contain opacity-60 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0"
+              width={128}
+              height={48}
+              className="h-full w-full max-w-full object-contain  transition duration-300 "
+              sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 128px"
             />
           </div>
         ))}
@@ -58,44 +60,25 @@ function LogoSlider({ brands, direction = "left", speed = 30 }) {
 // ================= Main Section =================
 const TrustedBrands = () => {
   const brands = [
-    {
-      name: "Google",
-      logo: "/binali.png",
-    },
-    {
-      name: "Microsoft",
-      logo: "/caremedical.png",
-    },
-    {
-      name: "Apple",
-      logo: "jurhy.png",
-    },
-    {
-      name: "Amazon",
-      logo: "safefast.png",
-    },
-    {
-      name: "Meta",
-      logo: "safecaretechnology.png",
-    },
-    {
-      name: "Netflix",
-      logo: "safecaremedicalindustries.png",
-    },
-
+    { name: "Binali", logo: "/binali.png" },
+    { name: "Care Medical", logo: "/caremedical.png" },
+    { name: "Jurhy", logo: "/jurhy.png" },
+    { name: "Safefast", logo: "/safefast.png" },
+    { name: "Safecare Technology", logo: "/safecaretechnology.png" },
+    { name: "Safecare Medical Industries", logo: "/safecaremedicalindustries.png" },
   ];
 
   return (
-    <section className="lg:pt-20 pt-18 bg-body overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="mb-10 text-center">
-          <h6 className="text-body-alt tracking-wide uppercase font-semibold ">
-             Our brands
-          </h6>
+    <section className="pt-10 pb-20 bg-body overflow-hidden">
+      <div className="container mx-auto sm:px-6 max-w-[1460px] lg:py-20 py-12 px-5 lg:px-20">
+        <div className="mb-8 sm:mb-10 md:mb-12 text-center">
+          <h2 className="text-dark-2 tracking-wide uppercase font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+            Our Brands
+          </h2>
         </div>
 
         {/* First Row: Right to Left */}
-        <LogoSlider brands={brands} direction="left" speed={30} />
+        <HorizontalSlider brands={brands} direction="left" speed={25} />
       </div>
     </section>
   );
