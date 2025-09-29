@@ -8,11 +8,11 @@ const Hero = () => {
       className="min-h-[calc(100vh-80px)] bg-cover bg-center flex items-end px-5 lg:px-20 overflow-hidden"
       style={{
         backgroundImage: "url('/Herosection-bg.png')",
-        minHeight: "calc(100vh - 80px)",
+        minHeight: "calc(90vh - 80px)",
       }}
     >
       {/* Container for centered content */}
-      <div className="container text-dark-2 mx-auto flex flex-col lg:flex-row items-center justify-between w-full md:pt-10">
+      <div className="container text-dark-2 mx-auto flex flex-col lg:flex-row items-center justify-between w-full h-screen md:pt-10 py-20 lg:py-0">
         {/* Content */}
         <div className="xl:max-w-[590px] space-y-4 flex-1 flex flex-col justify-start h-[400px] mb-10 md:mb-0">
           <p className="text-2xl lg:text-3xl text-main uppercase tracking-wide mb-6 sm:text-base">Welcome to </p>
@@ -39,17 +39,33 @@ const Hero = () => {
         </div>
 
         {/* Doctor Image - Right Side */}
-        <div className="flex-1 flex justify-center items-start h-[900px]">
+        <div className="flex-1 flex justify-center items-start h-screen">
           <Image
             src="/hero-men.png"
             alt="doctor"
             width={500}
             height={900}
             priority
-            className="w-[250px] sm:w-[320px] md:w-[420px] lg:w-[700px] lg:h-[900px] object-fill"
+            className="w-[250px] sm:w-[320px] md:w-[420px] lg:w-auto lg:h-screen object-fill"
           />
         </div>
       </div>
+          {/* Scroll Indicator - Only on desktop */}
+      <motion.div
+        className="hidden lg:flex flex-col items-center absolute bottom-6 left-1/2 transform -translate-x-1/2 text-primary z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+      >
+        <span className="text-sm mb-2">Scroll Down</span>
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+          <motion.div
+            className="w-1 h-3 bg-primary rounded-full mt-2"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };

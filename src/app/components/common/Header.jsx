@@ -31,7 +31,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // ✅ Fixed JS version (removed TypeScript type)
+  // ✅ Fixed JS version 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -39,9 +39,9 @@ const Header = () => {
   };
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md">
+    <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md contanier mx-auto">
       {/* Top Bar */}
-      <div className="bg-gray-7 hidden sm:flex justify-center lg:justify-between items-center h-12 md:px-40">
+      <div className="bg-gray-7 hidden sm:flex justify-center lg:justify-between items-center h-12 px-5 xl:px-40  ">
         <div className="flex items-center text-dark-4 space-x-4">
           <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
           <span>
@@ -88,7 +88,7 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <div className="flex justify-between items-center px-5 !lg:pr-[478px] xl:mx-40 h-20 bg-white">
+      <div className="flex justify-between items-center px-5 xl:mx-40 h-20 bg-white">
         <div className="flex-shrink-0">
           <a href="/">
             <Image

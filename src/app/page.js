@@ -8,13 +8,15 @@ import ProductsServices from './components/pages/home/ProductsServices.jsx';
 import SpecialServices from './components/pages/home/SpecialServices.jsx';
 import Footer from './components/common/Footer.jsx';
 import TechnologyGrid from './components/pages/home/Technology.jsx';
+import { HeroSection } from './components/pages/home/HeroSection.jsx';
 // import Testing from './components/pages/home/testing.jsx';
 
 export default function Home() {
   return (
     <>
     <Header />
-    <Hero />
+    <HeroSection/>
+    {/* <Hero /> */}
     <TrustedBrands />
     <AboutUs />
     <OurBrands />
@@ -24,6 +26,7 @@ export default function Home() {
     {/* <Testing /> */}
     <TechnologyGrid />
     <Footer />
+    
     </>
   );
 }

@@ -24,10 +24,10 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full bg-white font-inter border-t border-gray-200 overflow-hidden text-[#333] text-[16px] leading-normal "
+      className="w-full  bg-white font-inter border-t border-gray-200 overflow-hidden text-[#333] text-[16px] leading-normal "
     >
       {/* Main Content */}
-      <div className="py-16 flex flex-col lg:flex-row justify-between flex-wrap gap-12 container mx-auto">
+      <div className="px-8 py-8 lg:py-16 flex flex-col lg:flex-row justify-between flex-wrap gap-12 lg:container lg:mx-auto">
         {/* Logo + Contact */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

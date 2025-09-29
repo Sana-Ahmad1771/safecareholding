@@ -78,7 +78,7 @@ const SpecialServices = () => {
                 <h3 className="text-base sm:text-lg font-semibold mb-1">
                   {service.title}
                 </h3>
-                <p className="text-dark-2/80 text-sm leading-relaxed">
+                <p className="text-dark-2/80 text-sm sm:text-base  leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -106,7 +106,7 @@ const SpecialServices = () => {
             {servicesRight.map((service, index) => (
               <div
                 key={index}
-                className="flex gap-4 items-start text-dark-2 flex-col sm:flex-row max-w-[70%]"
+                className="flex gap-4 items-start text-dark-2 flex-col sm:flex-row max-w-[100%]"
               >
                 {/* Icon Box */}
                 <div className="w-10 h-10 flex items-center justify-center rounded-md bg-white/20 text-dark-2 text-xl shrink-0">
@@ -117,7 +117,7 @@ const SpecialServices = () => {
                   <h3 className="text-base sm:text-lg font-semibold mb-1">
                     {service.title}
                   </h3>
-                  <p className="text-dark-2 text-sm leading-relaxed">
+                  <p className="text-dark-2 text-sm sm:text-base leading-relaxed">
                     {service.description}
                   </p>
                 </div>

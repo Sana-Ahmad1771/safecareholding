@@ -52,7 +52,7 @@ const TechnologyGrid = () => {
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r text-dark-2 bg-clip-text  mb-6">
             We Are Also in the Technology
           </h2>
-          <p className="text-gray-500 text-base md:text-lg max-w-3xl mx-auto">
+          <p className="text-gray-500 text-lg sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto">
             From digital marketing to networking and hosting, we provide
             end-to-end technology solutions that help businesses grow, connect,
             and thrive in the digital era.
@@ -85,7 +85,7 @@ const TechnologyGrid = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
                   {item.description}
                 </p>
 

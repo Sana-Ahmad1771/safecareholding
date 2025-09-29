@@ -74,7 +74,7 @@ const OurBrands = () => {
                 <h3 className="text-xl font-bold mt-1">
                   Safecare Holding Company
                 </h3>
-                <p className="text-sm leading-relaxed mt-4">
+                <p className="text-lg sm:text-base md:text-lg lg:text-[22px] leading-relaxed mt-4">
                   Safecare Holding company is your premier destination for
                   healthcare products and medical supplies. We offer a wide
                   range of high-quality products with convenient online shopping

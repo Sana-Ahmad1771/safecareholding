@@ -45,7 +45,7 @@ const ProductsServices = () => {
           <div className="flex justify-center">
             <div className="w-20 sm:w-32 md:w-44 :w-[244px] h-0.5 bg-gray-4"></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-lg sm:text-base md:text-lg lg:text-[22px] leading-relaxed">
             The medical field demands the highest quality medical supplies and
             equipment. Safecare’s line of medical products includes:
           </p>
