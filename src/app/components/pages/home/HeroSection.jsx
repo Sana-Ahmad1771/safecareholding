@@ -5,68 +5,179 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <section
-      className="relative w-full bg-white overflow-hidden bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      className="relative w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-9 to-gray-7"
       aria-label="Hero Section"
       style={{
-        backgroundImage: "url('/Herosection-bg.png')",
         minHeight: "calc(100vh - 80px)",
         height: "calc(100vh - 80px)",
       }}
     >
-      {/* Overlay for better text contrast */}
+      {/* Geometric background elements */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-16 -right-16 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute -bottom-16 -left-16 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gray-8 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+
+      {/* Grid pattern overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:56px_56px] lg:bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_50%,black,transparent)]"
         aria-hidden="true"
-      />
+      ></div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center h-full px-4 sm:px-8 lg:px-20 py-4 gap-6 w-full max-w-7xl mx-auto">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-4 sm:py-8 w-full max-w-7xl mx-auto">
+        
         {/* Text Section */}
-        <div className="text-center lg:text-left max-w-xl animate-fadeIn flex flex-col justify-center h-full">
-          <p
-            className="font-semibold text-[#1eb7b1] tracking-wide mb-2"
-            style={{ fontSize: "clamp(1rem, 2vw, 1.75rem)" }}
-          >
-            Welcome to
+        <div className="text-center lg:text-left max-w-2xl lg:max-w-none lg:w-1/2 flex flex-col justify-center h-full space-y-4 sm:space-y-6 lg:space-y-8 py-4 lg:py-8">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full bg-primary-20 border border-primary mb-2 sm:mb-4 mx-auto lg:mx-0 w-fit">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full animate-pulse"></div>
+            <span className="font-medium text-primary text-xs sm:text-sm tracking-wide">
+              TRUSTED HEALTHCARE SOLUTIONS
+            </span>
+          </div>
+
+          {/* Headings */}
+          <div className="space-y-2 sm:space-y-4">
+            <h1 className="font-bold text-dark-2 leading-tight tracking-tight">
+              <span className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+                Safecare 
+              </span>
+              <span className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mt-1 sm:mt-2">
+                Holding Company
+              </span>
+            </h1>
+          </div>
+
+          {/* Divider */}
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0 shadow-lg"></div>
+
+          {/* Description */}
+          <p className="max-w-xl mx-auto lg:mx-0 font-light text-dark-5 leading-relaxed text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl">
+            Qualified Staff With Expertise in Services We Offer for more
+            Reasonable cost with love. Just explore about More!
           </p>
-          <h1
-            className="font-extrabold text-[#222] leading-tight drop-shadow-lg mb-4"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-          >
-            Safecare Holding
-            <br />
-            Company
-          </h1>
-          <div className="mt-2 mb-6 mx-auto lg:mx-0 w-24 sm:w-40 md:w-60 lg:w-[200px] h-[3px] bg-[#1eb7b1] rounded-full shadow" />
-          <p
-            className="max-w-[600px] mx-auto lg:mx-0 font-normal text-[#333] leading-relaxed mb-6"
-            style={{ fontSize: "clamp(0.9rem, 2vw, 1.25rem)" }}
-          >
-            Qualified staff with expertise in services we offer for more
-            <br className="hidden sm:block" />
-            reasonable cost with love. Just explore more!
-          </p>
-          {/* CTA Button */}
-          <a
-            href="#about"
-            className="inline-block xl:w-fit px-6 py-2 bg-[#1eb7b1] text-white font-semibold rounded-full shadow-lg hover:bg-[#159a95] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#1eb7b1] focus:ring-offset-2 text-base"
-            aria-label="Learn more about Safecare Holding"
-            style={{ fontSize: "clamp(1rem, 2vw, 1.15rem)" }}
-          >
-            Learn More
-          </a>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
+            <a
+              href="#services"
+              className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-20 text-sm sm:text-base md:text-lg"
+            >
+              Explore Services
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-white text-primary font-semibold rounded-xl border-2 border-gray-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-2-20 text-sm sm:text-base md:text-lg"
+            >
+              Contact Us
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        {/* Banner main image */}
-        <div className="relative w-full lg:w-auto flex-1 h-full flex items-end justify-center">
-          <div className="relative w-full max-w-[220px] sm:max-w-[320px] md:max-w-[420px] lg:max-w-[539px] h-full max-h-[calc(100vh-80px)]">
-            <Image
-              src="/hero-men.png"
-              alt="Smiling healthcare professional representing Safecare Holding"
-              fill
-              priority
-              className="object-contain"
-            />
+        {/* Image Section */}
+        <div className="relative w-full lg:w-1/2 h-[200px] xs:h-[240px] sm:h-[320px] md:h-[380px] lg:h-[480px] xl:h-[560px] 2xl:h-[640px] flex items-end justify-center mt-4 sm:mt-6 lg:mt-0 lg:pl-8 xl:pl-12">
+          <div className="relative w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full">
+            {/* Background cards */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-7 rounded-2xl shadow-2xl rotate-1 scale-95"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl shadow-xl"></div>
+
+            {/* Main Image */}
+            <div className="relative h-full flex items-end justify-center">
+              <Image
+                src="/hero-men.png"
+                alt="Professional healthcare expert from Safecare Holding Company"
+                width={500}
+                height={600}
+                className="object-contain object-bottom w-auto h-full max-h-[180px] xs:max-h-[220px] sm:max-h-[280px] md:max-h-[340px] lg:max-h-[400px] xl:max-h-[480px] 2xl:max-h-[540px] drop-shadow-2xl"
+                priority
+              />
+            </div>
+
+            {/* Floating card bottom-left */}
+            <div className="absolute -bottom-2 -left-2 xs:-bottom-3 xs:-left-3 sm:-bottom-4 sm:-left-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-semibold text-dark-2 text-xs sm:text-sm md:text-base">
+                    24/7 Care
+                  </div>
+                  <div className="text-xs text-dark-6">
+                    Always Available
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating card top-right */}
+            <div className="absolute -top-2 -right-2 xs:-top-3 xs:-right-3 sm:-top-4 sm:-right-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-primary-20 rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-semibold text-dark-2 text-xs sm:text-sm md:text-base">
+                    Modern
+                  </div>
+                  <div className="text-xs text-dark-6">
+                    Facilities
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
