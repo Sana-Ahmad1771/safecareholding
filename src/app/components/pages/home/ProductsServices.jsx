@@ -35,7 +35,7 @@ const ProductsServices = () => {
   ];
 
   return (
-    <section className="bg-gray-7 text-dark-2 py-12 lg:py-20 px-5 lg:px-20">
+    <section className="bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20">
       <div className="container mx-auto space-y-12">
         {/* Heading Section */}
         <div className="text-center max-w-2xl mx-auto space-y-4">
@@ -52,13 +52,13 @@ const ProductsServices = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap gap-10 items-center justify-center">
           {products.map((item, index) => {
             const isRespiratory = item.title === "Respiratory Consumables";
             return (
               <div
                 key={index}
-                className={`rounded-xl border border-gray-5 shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col ${
+                className={`rounded-xl border max-h-[227px] max-w-[407px] border-gray-5 shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col ${
                   isRespiratory ? "bg-primary text-white" : "bg-white"
                 }`}
               >

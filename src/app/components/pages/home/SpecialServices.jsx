@@ -11,19 +11,19 @@ import {
 const SpecialServices = () => {
   const servicesLeft = [
     {
-      icon: <FaHospital />,
+      icon: <FaHospital size={25}/>,
       title: "Surgical Kits / Pack",
       description:
         "Cortex Clinical Management System provides a user-friendly technique of EMR, Eclaim procedure, and other operations in Clinics & Medical Centers.",
     },
     {
-      icon: <FaClinicMedical />,
+      icon: <FaClinicMedical size={25}/>,
       title: "Clinic Management System",
       description:
         "Cortex Clinical Management System provides a user-friendly technique of EMR, Eclaim procedure, and other operations in Clinics & Medical Centers.",
     },
     {
-      icon: <FaFileInvoiceDollar />,
+      icon: <FaFileInvoiceDollar size={25}/>,
       title: "Eclaim Management System",
       description:
         "Hospitals can use our e-claim management system to prepare and submit their e-claims to the appropriate insurance carriers.",
@@ -32,19 +32,19 @@ const SpecialServices = () => {
 
   const servicesRight = [
     {
-      icon: <FaPills />,
+      icon: <FaPills size={25}/>,
       title: "Pharmacy Management System",
       description:
         "In today's pharmacy industry, you need software solutions that address all aspects of providing pharmacy products to patients.",
     },
     {
-      icon: <FaFileSignature />,
+      icon: <FaFileSignature size={25}/>,
       title: "Prior Authorization System",
       description:
         "The Cortex Prior Auth System provides a thorough process for the insurance department's requirement for prior authorization approval.",
     },
     {
-      icon: <FaCogs />,
+      icon: <FaCogs size={25}/>,
       title: "Integrated ERP Solutions",
       description:
         "Cortex Integrated ERP is a flexible solution that provides unmatched value and efficiency for your business operations.",
@@ -70,7 +70,7 @@ const SpecialServices = () => {
               className="flex gap-4 items-start max-w-2xl flex-col sm:flex-row"
             >
               {/* Icon Box */}
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-gray-1/20 text-primary text-xl shrink-0">
+              <div className="w-11 h-11 flex items-center justify-center rounded-md bg-gray-9 text-primary text-xl shrink-0">
                 {service.icon}
               </div>
               {/* Text */}
@@ -85,45 +85,44 @@ const SpecialServices = () => {
             </div>
           ))}
         </div>
+        {/* right column inside container */}
+        <div className="relative w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:h-[820px] flex flex-col justify-center lg:items-end space-y-10">
+          {/* Right column with full-width background */}
+          <div
+            className="absolute z-30 right-0 top-0 w-[100%] lg:flex-1 min-h-full lg:h-full bg-no-repeat bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/services-right.png')",
+            }}
+          />
 
-        {/* Right column with full-width background */}
-        <div
-          className="w-full lg:flex-1 min-h-[600px] lg:h-[820px] bg-no-repeat bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/services-right.png')",
-          }}
-        >
-          {/* Inner content box, same padding as left */}
-          <div className="w-full h-full flex flex-col justify-center py-12 lg:py-20 px-5 lg:px-20 space-y-10">
-            {/* Transparent heading placeholder to align with left */}
-            <div className="mb-8 lg:mb-12">
-              <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl text-transparent">
-                Special Services
-              </h2>
-              <div className="border border-transparent bg-transparent h-1 w-12 mt-3"></div>
-            </div>
-
-            {servicesRight.map((service, index) => (
-              <div
-                key={index}
-                className="flex gap-4 items-start text-dark-2 flex-col sm:flex-row max-w-[100%]"
-              >
-                {/* Icon Box */}
-                <div className="w-10 h-10 flex items-center justify-center rounded-md bg-white/20 text-dark-2 text-xl shrink-0">
-                  {service.icon}
-                </div>
-                {/* Text */}
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-1">
-                    {service.title}
-                  </h3>
-                  <p className="text-dark-2 text-sm sm:text-base leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Heading */}
+          <div className="mb-8 lg:mb-12 w-full text-left max-w-2xl text-transparent ">
+            <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+              Special Services
+            </h2>
+            <div className="border-transparent border bg-transparent h-1 w-12 mt-3"></div>
           </div>
+
+          {servicesRight.map((service, index) => (
+            <div
+              key={index}
+              className="flex relative z-40 gap-4 items-start max-w-2xl flex-col sm:flex-row"
+            >
+              {/* Icon Box */}
+              <div className="w-11 h-11 flex items-center justify-center rounded-md bg-white text-primary text-xl shrink-0">
+                {service.icon}
+              </div>
+              {/* Text */}
+              <div>
+                <h3 className="text-base sm:text-lg font-semibold mb-1">
+                  {service.title}
+                </h3>
+                <p className="text-dark-2/80 text-sm sm:text-base  leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

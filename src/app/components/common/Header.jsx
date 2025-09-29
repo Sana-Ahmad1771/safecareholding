@@ -155,14 +155,6 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="border border-gray-2 rounded-full px-3 py-2 hidden lg:block bg-white">
-          <input
-            type="search"
-            placeholder="Search Here"
-            className="outline-none bg-transparent text-sm text-dark-5 placeholder-gray-400"
-          />
-        </div>
-
         {/* Mobile View */}
         <div className="lg:hidden relative">
           <button onClick={toggleMenu}>
