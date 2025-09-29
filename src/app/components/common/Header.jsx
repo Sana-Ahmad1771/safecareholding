@@ -103,7 +103,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block text-dark-2">
           <ul className="flex justify-center items-center space-x-5 list-none">
             <li>
               <div className="flex items-center space-x-4">
