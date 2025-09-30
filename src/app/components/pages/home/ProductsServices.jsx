@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const ProductsServices = () => {
   const products = [
@@ -35,10 +38,16 @@ const ProductsServices = () => {
   ];
 
   return (
-    <section className="bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20">
+    <section className="bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20 overflow-hidden">
       <div className="container mx-auto space-y-12">
         {/* Heading Section */}
-        <div className="text-center max-w-2xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="text-center max-w-2xl mx-auto space-y-4"
+        >
           <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
             Products & Services
           </h2>
@@ -49,15 +58,19 @@ const ProductsServices = () => {
             The medical field demands the highest quality medical supplies and
             equipment. Safecare’s line of medical products includes:
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards Grid */}
-        <div className="flex flex-wrap gap-10 items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center xl:max-w-4/5 mx-auto">
           {products.map((item, index) => {
             const isRespiratory = item.title === "Respiratory Consumables";
             return (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                viewport={{ once: false, amount: 0.2 }}
                 className={`rounded-xl border max-h-[227px] max-w-[407px] border-gray-5 shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col ${
                   isRespiratory ? "bg-primary text-white" : "bg-white"
                 }`}
@@ -82,7 +95,7 @@ const ProductsServices = () => {
                 >
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

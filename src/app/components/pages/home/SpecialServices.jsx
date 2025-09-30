@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   FaHospital,
@@ -7,23 +8,24 @@ import {
   FaFileSignature,
   FaCogs,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const SpecialServices = () => {
   const servicesLeft = [
     {
-      icon: <FaHospital size={25}/>,
+      icon: <FaHospital size={25} />,
       title: "Surgical Kits / Pack",
       description:
         "Cortex Clinical Management System provides a user-friendly technique of EMR, Eclaim procedure, and other operations in Clinics & Medical Centers.",
     },
     {
-      icon: <FaClinicMedical size={25}/>,
+      icon: <FaClinicMedical size={25} />,
       title: "Clinic Management System",
       description:
         "Cortex Clinical Management System provides a user-friendly technique of EMR, Eclaim procedure, and other operations in Clinics & Medical Centers.",
     },
     {
-      icon: <FaFileInvoiceDollar size={25}/>,
+      icon: <FaFileInvoiceDollar size={25} />,
       title: "Eclaim Management System",
       description:
         "Hospitals can use our e-claim management system to prepare and submit their e-claims to the appropriate insurance carriers.",
@@ -32,19 +34,19 @@ const SpecialServices = () => {
 
   const servicesRight = [
     {
-      icon: <FaPills size={25}/>,
+      icon: <FaPills size={25} />,
       title: "Pharmacy Management System",
       description:
         "In today's pharmacy industry, you need software solutions that address all aspects of providing pharmacy products to patients.",
     },
     {
-      icon: <FaFileSignature size={25}/>,
+      icon: <FaFileSignature size={25} />,
       title: "Prior Authorization System",
       description:
         "The Cortex Prior Auth System provides a thorough process for the insurance department's requirement for prior authorization approval.",
     },
     {
-      icon: <FaCogs size={25}/>,
+      icon: <FaCogs size={25} />,
       title: "Integrated ERP Solutions",
       description:
         "Cortex Integrated ERP is a flexible solution that provides unmatched value and efficiency for your business operations.",
@@ -52,42 +54,51 @@ const SpecialServices = () => {
   ];
 
   return (
-    <section className="bg-body text-dark-2">
+    <section className="bg-body text-dark-2 overflow-hidden">
       <div className="flex flex-col lg:flex-row">
-        {/* Left column inside container */}
+        {/* Left column */}
         <div className="w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:h-[820px] flex flex-col justify-center lg:items-end space-y-10">
           {/* Heading */}
-          <div className="mb-8 lg:mb-12 w-full text-left max-w-2xl">
+          <motion.div
+            className="mb-8 lg:mb-12 w-full text-left max-w-2xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
               Special Services
             </h2>
             <div className="border border-primary bg-primary h-1 w-12 mt-3"></div>
-          </div>
+          </motion.div>
 
           {servicesLeft.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex gap-4 items-start max-w-2xl flex-col sm:flex-row"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: false, amount: 0.2 }}
             >
-              {/* Icon Box */}
               <div className="w-11 h-11 flex items-center justify-center rounded-md bg-gray-9 text-primary text-xl shrink-0">
                 {service.icon}
               </div>
-              {/* Text */}
               <div>
                 <h3 className="text-base sm:text-lg font-semibold mb-1">
                   {service.title}
                 </h3>
-                <p className="text-dark-2/80 text-sm sm:text-base  leading-relaxed">
+                <p className="text-dark-2/80 text-sm sm:text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-        {/* right column inside container */}
+
+        {/* Right column */}
         <div className="relative w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:h-[820px] flex flex-col justify-center lg:items-end space-y-10">
-          {/* Right column with full-width background */}
+          {/* Background image */}
           <div
             className="absolute z-30 right-0 top-0 w-[100%] lg:flex-1 min-h-full lg:h-full bg-no-repeat bg-cover bg-center"
             style={{
@@ -95,33 +106,41 @@ const SpecialServices = () => {
             }}
           />
 
-          {/* Heading */}
-          <div className="mb-8 lg:mb-12 w-full text-left max-w-2xl text-transparent ">
+          {/* Transparent heading placeholder for spacing */}
+          <motion.div
+            className="mb-8 lg:mb-12 w-full text-left max-w-2xl text-transparent"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
               Special Services
             </h2>
             <div className="border-transparent border bg-transparent h-1 w-12 mt-3"></div>
-          </div>
+          </motion.div>
 
           {servicesRight.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex relative z-40 gap-4 items-start max-w-2xl flex-col sm:flex-row"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: false, amount: 0.2 }}
             >
-              {/* Icon Box */}
               <div className="w-11 h-11 flex items-center justify-center rounded-md bg-white text-primary text-xl shrink-0">
                 {service.icon}
               </div>
-              {/* Text */}
               <div>
                 <h3 className="text-base sm:text-lg font-semibold mb-1">
                   {service.title}
                 </h3>
-                <p className="text-dark-2/80 text-sm sm:text-base  leading-relaxed">
+                <p className="text-dark-2/80 text-sm sm:text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

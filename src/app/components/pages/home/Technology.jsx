@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const TechnologyGrid = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -48,8 +49,14 @@ const TechnologyGrid = () => {
     <section className="relative min-h-screen bg-gray-8 py-16 px-6 lg:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto pt-20">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r text-dark-2 bg-clip-text  mb-6">
+        <motion.div
+          className="text-center mb-14"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
             We Are Also in the Technology
           </h2>
           <p className="text-gray-500 text-lg sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto">
@@ -57,18 +64,22 @@ const TechnologyGrid = () => {
             end-to-end technology solutions that help businesses grow, connect,
             and thrive in the digital era.
           </p>
-        </div>
+        </motion.div>
 
         {/* Technology Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologyItems.map((item) => (
-            <div
+          {technologyItems.map((item, index) => (
+            <motion.div
               key={item.id}
               className={`relative group cursor-pointer transition-all duration-300 transform ${
                 activeItem === item.id ? "scale-[1.03]" : "hover:scale-105"
               }`}
               onMouseEnter={() => setActiveItem(item.id)}
               onMouseLeave={() => setActiveItem(null)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               {/* Card */}
               <div className="bg-white backdrop-blur-xl rounded-2xl p-8 border border-gray-200 hover:border-primary/50 transition-all duration-300 shadow-md hover:shadow-xl h-full">
@@ -95,14 +106,36 @@ const TechnologyGrid = () => {
 
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-20 to-primary blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* Floating Background Blobs */}
-      <div className="absolute top-1/12 -left-10 w-60 h-60 bg-primary/60 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/12 -right-10 w-72 h-72 bg-primary/60 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <motion.div
+        className="absolute top-1/12 -left-10 w-60 h-60 bg-primary/60 rounded-full blur-3xl"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false }}
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/12 -right-10 w-72 h-72 bg-primary/60 rounded-full blur-3xl"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false }}
+        animate={{ y: [0, 20, 0] }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
     </section>
   );
 };

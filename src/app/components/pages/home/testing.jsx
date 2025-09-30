@@ -34,7 +34,7 @@ const servicesRight = [
 
 const Testing = () => {
   return (
-    <section className="relative w-full max-w-[1440px] h-[804px] mx-auto flex">
+    <section className="relative w-full max-w-[1440px] h-[804px] mx-auto flex overflow-hidden">
       {/* Left background overlay */}
       <div className="absolute left-0 top-0 w-1/2 h-full bg-white opacity-10" />
 

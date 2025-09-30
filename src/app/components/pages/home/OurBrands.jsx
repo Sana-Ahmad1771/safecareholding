@@ -57,12 +57,18 @@ const OurBrands = () => {
 
   return (
     <section
-      className="relative lg:py-20 py-12 px-5 lg:px-10 xl:px-20 flex items-end justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
+      className="relative overflow-hidden lg:py-20 py-12 px-5 lg:px-10 xl:px-20 flex items-end justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
       style={{
         backgroundImage: "url('/ourbrands-bg.png')",
       }}
     >
-      <div className="w-full h-auto flex lg:flex-col flex-col-reverse">
+      <motion.div
+        className="w-full h-auto flex lg:flex-col flex-col-reverse"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 0.2 }} // re-animates when scrolled back
+        transition={{ duration: 0.8 }}
+      >
         {/* Navigation Buttons */}
         <div className="container mx-auto flex lg:justify-end justify-center gap-4">
           <button
@@ -90,23 +96,47 @@ const OurBrands = () => {
         {/* content + cards */}
         <div className="container mx-auto h-full flex flex-col lg:flex-row items-end justify-between gap-10 lg:gap-16">
           {/* Text Section */}
-          <div className="lg:w-3/5 w-full space-y-6 text-white text-center lg:text-left">
+          <motion.div
+            className="lg:w-3/5 w-full space-y-6 text-white text-center lg:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+          >
             <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
               Our Brands
             </h2>
-            <div className="border bg-white border-white w-12 h-1 mx-auto lg:mx-0 mb-4"></div>
-            <p className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <motion.div
+              className="border bg-white border-white w-12 h-1 mx-auto lg:mx-0 mb-4"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            />
+            <motion.p
+              className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               At Safecare Holding Company, we are committed to transforming the
               healthcare landscape by providing innovative solutions and
               exceptional customer experiences. With a diverse portfolio of
               subsidiaries, we cover a wide range of healthcare needs, ensuring
               that individuals and organizations have access to the best
               products and services available.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Swiper Section */}
-          <div className="lg:w-1/2 w-full relative">
+          <motion.div
+            className="lg:w-1/2 w-full relative"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+          >
             <Swiper
               modules={[Navigation]}
               onSwiper={(swiper) => {
@@ -191,9 +221,9 @@ const OurBrands = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
