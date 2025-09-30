@@ -9,6 +9,7 @@ import SpecialServices from './components/pages/home/SpecialServices.jsx';
 import Footer from './components/common/Footer.jsx';
 import TechnologyGrid from './components/pages/home/Technology.jsx';
 import { HeroSection } from './components/pages/home/HeroSection.jsx';
+import About from './components/pages/home/About.jsx';
 // import Testing from './components/pages/home/testing.jsx';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <TrustedBrands />
     <AboutUs />
     <OurBrands />
+    <About />
     <QualityProducts />
     <ProductsServices />
     <SpecialServices />
