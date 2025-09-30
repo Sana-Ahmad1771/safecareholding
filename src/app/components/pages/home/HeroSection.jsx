@@ -191,7 +191,7 @@ export const HeroSection = () => {
 
                 {/* CTA Buttons */}
                 <motion.div
-                  className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4"
+                  className="flex flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.2 }}
@@ -268,76 +268,6 @@ export const HeroSection = () => {
                       className="object-contain object-bottom w-auto h-full max-h-[180px] xs:max-h-[220px] sm:max-h-[280px] md:max-h-[340px] lg:max-h-[400px] xl:max-h-[480px] 2xl:max-h-[540px] drop-shadow-2xl"
                       priority
                     />
-                  </motion.div>
-
-                  {/* Floating card bottom-left */}
-                  <motion.div
-                    className="absolute -bottom-2 -left-2 xs:-bottom-3 xs:-left-3 sm:-bottom-4 sm:-left-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3"
-                    initial={{ opacity: 0, x: -20, y: 20 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                  >
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-dark-2 text-xs sm:text-sm md:text-base">
-                          Multiple Brands
-                        </div>
-                        <div className="text-xs text-dark-6">
-                          Healthcare Portfolio
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Floating card top-right */}
-                  <motion.div
-                    className="absolute -top-2 -right-2 xs:-top-3 xs:-right-3 sm:-top-4 sm:-right-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3"
-                    initial={{ opacity: 0, x: 20, y: -20 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.4 }}
-                    whileHover={{ scale: 1.05, y: 5 }}
-                  >
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-primary-20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-dark-2 text-xs sm:text-sm md:text-base">
-                          Group Company
-                        </div>
-                        <div className="text-xs text-dark-6">
-                          Holding Structure
-                        </div>
-                      </div>
-                    </div>
                   </motion.div>
                 </motion.div>
               </div>
