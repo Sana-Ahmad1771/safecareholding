@@ -38,7 +38,9 @@ const ProductsServices = () => {
   ];
 
   return (
-    <section className="bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20 overflow-hidden">
+    <section 
+    id="services"
+    className="scroll-mt-30 bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20 overflow-hidden">
       <div className="container mx-auto space-y-12">
         {/* Heading Section */}
         <motion.div

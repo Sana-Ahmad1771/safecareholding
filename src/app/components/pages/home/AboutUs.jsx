@@ -9,8 +9,9 @@ const AboutUs = () => {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
-      className="relative px-4 sm:px-8 lg:px-20 py-8 lg:pb-16 lg:pt-32 bg-body text-dark-2"
+      className="relative scroll-mt-50 px-4 sm:px-8 lg:px-20 py-8 lg:pb-16 lg:pt-32 bg-body text-dark-2"
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {/* Image Section */}
@@ -83,3 +84,5 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+

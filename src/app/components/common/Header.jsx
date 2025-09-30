@@ -107,19 +107,19 @@ const Header = () => {
           <ul className="flex justify-center items-center space-x-5 list-none">
             <li>
               <div className="flex items-center space-x-4">
-                <Link href="/" className="hover:text-primary">
+                <a href="#home" className="hover:text-primary">
                   Home
-                </Link>
+                </a>
                 <div>
                   <span>/</span>
                 </div>
               </div>
             </li>
             <li>
-              <div className="flex items-center space-x-4">
-                <Link href="/" className="hover:text-primary">
+              <div className="flex items-center space-x-4 ">
+                <a href="#about"  className="hover:text-primary">
                   About Us
-                </Link>
+                </a>
                 <div>
                   <span>/</span>
                 </div>
@@ -127,9 +127,9 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <Link href="/" className="hover:text-primary">
-                  Products
-                </Link>
+                <a href="#ourbrands" className="hover:text-primary">
+                 Our Brands
+                </a>
                 <div>
                   <span>/</span>
                 </div>
@@ -137,9 +137,9 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <Link href="/" className="hover:text-primary">
-                  Gallery
-                </Link>
+                <a href="#quality" className="hover:text-primary">
+                  Quality
+                </a>
                 <div>
                   <span>/</span>
                 </div>
@@ -147,9 +147,9 @@ const Header = () => {
             </li>
             <li>
               <div className="">
-                <Link href="/" className="hover:text-primary">
-                  Careers
-                </Link>
+                <a href="#services" className="hover:text-primary">
+                  Services
+                </a>
               </div>
             </li>
           </ul>

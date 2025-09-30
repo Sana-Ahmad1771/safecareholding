@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 
 const QualityProducts = () => {
   return (
-    <section className="bg-body text-dark-2 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 overflow-hidden">
+    <section 
+    id="quality"
+    className="bg-bod scroll-mt-20 text-dark-2 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8 sm:gap-10 lg:gap-16 xl:gap-20">
         {/* Images Section */}
         <motion.div

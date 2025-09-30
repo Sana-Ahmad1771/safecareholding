@@ -57,7 +57,8 @@ const OurBrands = () => {
 
   return (
     <section
-      className="relative overflow-hidden lg:py-20 py-12 px-5 lg:px-10 xl:px-20 flex items-end justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
+      id="ourbrands"
+      className="relative scroll-mt-50 overflow-hidden lg:py-20 py-12 px-5 lg:px-10 xl:px-20 flex items-end justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
       style={{
         backgroundImage: "url('/ourbrands-bg.png')",
       }}

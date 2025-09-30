@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 export const HeroSection = () => {
   return (
     <section
-      className="relative w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-9 to-gray-7"
+      id="home"
+      className="relative scroll-mt-50 w-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-9 to-gray-7"
       aria-label="Hero Section"
       style={{
         minHeight: "calc(100vh - 80px)",
@@ -15,19 +16,19 @@ export const HeroSection = () => {
     >
       {/* Geometric background elements */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <motion.div 
+        <motion.div
           className="absolute -top-16 -right-16 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.7 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute -bottom-16 -left-16 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-accent/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.7 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gray-8 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.7 }}
@@ -49,7 +50,7 @@ export const HeroSection = () => {
         {/* Text Section */}
         <div className="text-center lg:text-left max-w-2xl lg:max-w-none lg:w-1/2 flex flex-col justify-center h-full space-y-4 sm:space-y-6 lg:space-y-8 py-4 lg:py-8">
           {/* Badge */}
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-full bg-primary-20 border border-primary mb-2 sm:mb-4 mx-auto lg:mx-0 w-fit"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +73,7 @@ export const HeroSection = () => {
               <span className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
                 Safecare
               </span>
-              <motion.span 
+              <motion.span
                 className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mt-1 sm:mt-2"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -84,7 +85,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Divider */}
-          <motion.div 
+          <motion.div
             className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0 shadow-lg"
             initial={{ width: 0 }}
             animate={{ width: "4rem" }}
@@ -92,7 +93,7 @@ export const HeroSection = () => {
           ></motion.div>
 
           {/* Description */}
-          <motion.p 
+          <motion.p
             className="max-w-xl mx-auto lg:mx-0 font-light text-dark-5 leading-relaxed text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,7 +104,7 @@ export const HeroSection = () => {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,7 +157,7 @@ export const HeroSection = () => {
 
         {/* Image Section */}
         <div className="relative w-full lg:w-1/2 h-[200px] xs:h-[240px] sm:h-[320px] md:h-[380px] lg:h-[480px] xl:h-[560px] 2xl:h-[640px] flex items-end justify-center mt-4 sm:mt-6 lg:mt-0 lg:pl-8 xl:pl-12">
-          <motion.div 
+          <motion.div
             className="relative w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -167,7 +168,7 @@ export const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl shadow-xl"></div>
 
             {/* Main Image */}
-            <motion.div 
+            <motion.div
               className="relative h-full flex items-end justify-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -184,7 +185,7 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Floating card bottom-left */}
-            <motion.div 
+            <motion.div
               className="absolute -bottom-2 -left-2 xs:-bottom-3 xs:-left-3 sm:-bottom-4 sm:-left-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3"
               initial={{ opacity: 0, x: -20, y: 20 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
@@ -217,7 +218,7 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Floating card top-right */}
-            <motion.div 
+            <motion.div
               className="absolute -top-2 -right-2 xs:-top-3 xs:-right-3 sm:-top-4 sm:-right-4 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-xl border border-gray-3"
               initial={{ opacity: 0, x: 20, y: -20 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
