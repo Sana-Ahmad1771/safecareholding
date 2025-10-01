@@ -19,7 +19,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-16 px-4">
+    <section
+    id="gallery"
+    className="py-16 px-4 scroll-mt-30">
       {/* Section Title */}
       <div className="text-center flex flex-col items-center container mx-auto space-y-4 mb-10">
         <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">

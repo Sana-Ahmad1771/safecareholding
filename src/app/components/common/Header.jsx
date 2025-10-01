@@ -67,19 +67,19 @@ const Header = () => {
         <div className="hidden lg:flex items-center space-x-4">
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
           <a href="#facebook" className="hover:scale-125">
-            <RiFacebookFill size={20}/>
+            <RiFacebookFill size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
           <a href="#twitter" className="hover:scale-125 ">
-            <FaXTwitter size={20}/>
+            <FaXTwitter size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
           <a href="#instagram" className="hover:scale-125 ">
-            <LuInstagram size={20}/>
+            <LuInstagram size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
           <a href="#linkedin" className="hover:scale-125 ">
-            <RxLinkedinLogo size={20}/>
+            <RxLinkedinLogo size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
         </div>
@@ -125,8 +125,8 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <a href="#ourbrands" className="hover:text-primary">
-                  Our Brands
+                <a href="#services" className="hover:text-primary">
+                  Services
                 </a>
                 <div>
                   <span>/</span>
@@ -145,8 +145,8 @@ const Header = () => {
             </li>
             <li>
               <div className="">
-                <a href="#services" className="hover:text-primary">
-                  Services
+                <a href="#gallery" className="hover:text-primary">
+                  Gallery
                 </a>
               </div>
             </li>

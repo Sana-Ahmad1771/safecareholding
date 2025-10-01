@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef(null); // ✅ Remove HTMLVideoElement type for SSR
   const sectionRef = useRef(null);
 
   // ✅ Replay animations every time it's in view
@@ -44,7 +44,7 @@ const AboutUs = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden scroll-mt-50 px-4 sm:px-8 lg:px-20 lg:pb-[210px] lg:pt-30 bg-body text-dark-2"
+      className="relative overflow-hidden scroll-mt-30 px-4 sm:px-8 lg:px-20 lg:pb-[210px] lg:pt-30 bg-body text-dark-2"
     >
       <div className="container mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
         {/* Left Text Content */}
@@ -52,7 +52,7 @@ const AboutUs = () => {
           className="flex-1 space-y-6 overflow-hidden"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "show" : "hidden"} // 👈 toggles on scroll
+          animate={isInView ? "show" : "hidden"}
         >
           <motion.p
             variants={itemVariants}
@@ -159,7 +159,6 @@ const AboutUs = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="relative w-[90%] max-w-4xl">
             {/* Close Button */}
