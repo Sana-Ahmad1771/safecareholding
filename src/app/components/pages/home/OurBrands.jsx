@@ -15,43 +15,43 @@ const OurBrands = () => {
   const cards = [
     {
       id: 1,
-      title: "Safecare Holding\nCompany",
-      hoverTitle: "Safecare Holding Company",
+      title: "Pharmaceutical\nExcellence",
+      hoverTitle: "Pharmaceutical Excellence Division",
       description:
-        "Safecare Holding company is your premier destination for healthcare products and medical supplies. We offer a wide range of high-quality products with convenient online shopping and fast delivery to meet all your healthcare needs.",
-      image: "/card-1.png",
+        "Leading the development and manufacturing of high-quality generic medications, specialty drugs, and innovative pharmaceutical solutions that improve patient outcomes worldwide.",
+      image: "/product-1.png",
     },
     {
       id: 2,
-      title: "Jurhy Online\nStore",
-      hoverTitle: "Jurhy Online Store",
+      title: "Medical Technology\nInnovation",
+      hoverTitle: "Medical Technology Innovation",
       description:
-        "Jurhy Online Store is your premier destination for healthcare products and medical supplies. We offer a wide range of high-quality products with convenient online shopping and fast delivery to meet all your healthcare needs.",
+        "Pioneering cutting-edge medical devices, diagnostic equipment, and digital health solutions that transform healthcare delivery and enhance clinical decision-making.",
       image: "/card-2.png",
     },
     {
       id: 3,
-      title: "Care Medical\nSolutions",
-      hoverTitle: "Care Medical Solutions",
+      title: "Healthcare\nInfrastructure",
+      hoverTitle: "Healthcare Infrastructure Solutions",
       description:
-        "Care Medical Solutions provides cutting-edge medical equipment and innovative healthcare technology. We partner with hospitals and clinics to deliver reliable medical devices that improve patient outcomes.",
+        "Building and supporting the essential healthcare infrastructure including hospital supplies, surgical equipment, and facility management systems for modern medical institutions.",
       image: "/product-1.png",
     },
     {
       id: 4,
-      title: "Binali\nPharmaceuticals",
-      hoverTitle: "Binali Pharmaceuticals",
+      title: "Digital Health\nPlatforms",
+      hoverTitle: "Digital Health Platforms",
       description:
-        "Binali Pharmaceuticals specializes in developing and manufacturing high-quality generic and specialty medications. Our commitment to research and development ensures access to affordable, effective treatments.",
+        "Developing integrated digital health ecosystems including telemedicine, health records management, and patient engagement platforms that connect providers and patients seamlessly.",
       image: "/product-2.png",
     },
     {
       id: 5,
-      title: "Binali\nPharmaceuticals",
-      hoverTitle: "Binali Pharmaceuticals",
+      title: "Global Supply\nChain",
+      hoverTitle: "Global Healthcare Supply Chain",
       description:
-        "Binali Pharmaceuticals specializes in developing and manufacturing high-quality generic and specialty medications. Our commitment to research and development ensures access to affordable, effective treatments.",
-      image: "/card-2.png",
+        "Managing end-to-end logistics, distribution, and supply chain solutions ensuring reliable delivery of critical healthcare products to partners across the globe.",
+      image: "/gallery-2.png",
     },
   ];
 
@@ -75,7 +75,7 @@ const OurBrands = () => {
           <button
             onClick={() => swiperInstance?.slidePrev()}
             disabled={isBeginning}
-            className={`w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center text-white transition-all ${
+            className={`w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center cursor-pointer text-white transition-all ${
               isBeginning ? "opacity-40 cursor-not-allowed" : "hover:scale-110"
             }`}
             aria-label="Previous brands"
@@ -85,7 +85,7 @@ const OurBrands = () => {
           <button
             onClick={() => swiperInstance?.slideNext()}
             disabled={isEnd}
-            className={`w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center text-white transition-all ${
+            className={`w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center cursor-pointer text-white transition-all ${
               isEnd ? "opacity-40 cursor-not-allowed" : "hover:scale-110"
             }`}
             aria-label="Next brands"
@@ -105,7 +105,7 @@ const OurBrands = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Our Brands
+              Our Healthcare Ecosystem
             </h2>
             <motion.div
               className="border bg-white border-white w-12 h-1 mx-auto lg:mx-0 mb-4"
@@ -121,12 +121,10 @@ const OurBrands = () => {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              At Safecare Holding Company, we are committed to transforming the
-              healthcare landscape by providing innovative solutions and
-              exceptional customer experiences. With a diverse portfolio of
-              subsidiaries, we cover a wide range of healthcare needs, ensuring
-              that individuals and organizations have access to the best
-              products and services available.
+              A fully integrated network of healthcare specialists united under
+              the Safecare vision. From pharmaceuticals to digital health, our
+              ecosystem delivers end-to-end solutions that transform patient
+              care and advance medical innovation.
             </motion.p>
           </motion.div>
 
@@ -198,7 +196,7 @@ const OurBrands = () => {
                         </p>
                       </div>
                       <button className="self-start bg-primary text-dark-2 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors">
-                        Read more
+                        Explore Division
                       </button>
                     </motion.div>
 

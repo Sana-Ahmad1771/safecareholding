@@ -5,60 +5,66 @@ import { motion, useInView } from "framer-motion";
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
+
+  // ✅ Replay animations every time it's in view
+  const isInView = useInView(sectionRef, { once: false, amount: 0.4 });
 
   const openVideo = () => {
     setShowVideo(true);
     setIsOpen(true);
-    // Play video when modal opens
     setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
+      if (videoRef.current) videoRef.current.play();
     }, 300);
   };
 
   const closeVideo = () => {
     setIsOpen(false);
-    // Stop video when modal closes
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
   };
 
+  // ✅ Variants with replay ability
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.25 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+  };
+
   return (
     <section
       id="about"
       ref={sectionRef}
-      className="relative scroll-mt-50 px-4 sm:px-8 lg:px-20 py-8 lg:pb-16 lg:pt-32 bg-body text-dark-2"
+      className="relative overflow-hidden scroll-mt-50 px-4 sm:px-8 lg:px-20 lg:pb-[210px] lg:pt-30 bg-body text-dark-2"
     >
       <div className="container mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
         {/* Left Text Content */}
         <motion.div
           className="flex-1 space-y-6 overflow-hidden"
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.7 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "show" : "hidden"} // 👈 toggles on scroll
         >
           <motion.p
+            variants={itemVariants}
             className="text-sm md:text-base uppercase tracking-widest text-primary border-b border-gray-500 pb-2 md:pb-3 w-fit"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
           >
             Leading Healthcare Innovation
           </motion.p>
 
           <div className="flex flex-col gap-4 md:gap-6">
             <motion.h2
-              className="font-semibold mb-4 text-dark-2 tracking-tight lg:leading-16 max-w-full"
-              style={{ fontSize: "clamp(1.25rem,3vw,2.5rem)" }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              variants={itemVariants}
+              className="font-semibold mb-4 text-dark-2 text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-5xl leading-snug tracking-tight lg:leading-16 max-w-full"
             >
               The healthcare partner{" "}
               <span className="font-serif italic text-primary text-[34px] sm:text-[39px] md:text-[49px] lg:text-[59px] xl:text-[64px]">
@@ -67,11 +73,9 @@ const AboutUs = () => {
             </motion.h2>
 
             <motion.h5
+              variants={itemVariants}
               className="max-w-full leading-relaxed md:leading-relaxed font-light text-dark-5"
               style={{ fontSize: "clamp(1rem,2vw,1.25rem)" }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
             >
               Welcome to{" "}
               <span className="font-semibold">Safecare Holding Company</span>, a
@@ -83,11 +87,9 @@ const AboutUs = () => {
             </motion.h5>
 
             <motion.p
+              variants={itemVariants}
               className="leading-relaxed text-dark-5"
               style={{ fontSize: "clamp(1rem,2vw,1.25rem)" }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
             >
               At Safecare Holding Company, we are committed to transforming the
               healthcare landscape by providing innovative solutions and
@@ -104,15 +106,15 @@ const AboutUs = () => {
           className="flex-1 flex justify-center items-center relative z-40"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
         >
           <div className="relative w-full group">
             {/* Preview video */}
-            <div className="relative w-full max-w-[clamp(320px,40vw,600px)] h-auto">
+            <div className="relative w-full max-w-[clamp(520px,40vw,800px)] h-auto">
               <video
                 src="/video.mp4"
                 className="
-                  w-full h-auto 
+                  w-[1200px] h-[600px] 
                   rounded-2xl 
                   shadow-lg 
                   object-cover 
@@ -131,7 +133,7 @@ const AboutUs = () => {
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-2xl group-hover:bg-black/30 transition duration-300">
                 <motion.button
-                  onClick={openVideo} // ✅ Only button triggers modal
+                  onClick={openVideo}
                   className="w-16 h-14 md:w-20 md:h-16 lg:w-24 lg:h-18 flex items-center justify-center rounded-lg bg-primary text-white shadow-lg hover:bg-primary/90 transition duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -157,6 +159,7 @@ const AboutUs = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="relative w-[90%] max-w-4xl">
             {/* Close Button */}

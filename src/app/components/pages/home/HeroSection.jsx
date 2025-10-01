@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"; // ✅ Lucide Icons
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -190,55 +191,14 @@ export const HeroSection = () => {
                 </motion.p>
 
                 {/* CTA Buttons */}
-                <motion.div
-                  className="flex flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.2 }}
-                >
-                  <motion.a
-                    href="#services"
-                    className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-20 text-sm sm:text-base md:text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Explore Services
-                    <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </motion.a>
-                  <motion.a
-                    href="#contact"
-                    className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-white text-primary font-semibold rounded-xl border-2 border-gray-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-2-20 text-sm sm:text-base md:text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Contact Us
-                    <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                      />
-                    </svg>
-                  </motion.a>
-                </motion.div>
+                <div className="flex flex-col sm:flex-row gap-4 ">
+                  <button className="px-6 sm:px-8 py-3 flex gap-3 justify-center items-center bg-primary text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-colors duration-200 shadow-lg">
+                    Explore Services  <ChevronRight size={20}/>
+                  </button>
+                  <button className="px-6 sm:px-8 flex gap-3 justify-center items-center py-3 border-2 border-white hover:border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200">
+                    Contact Us <MessageCircle size={20} />
+                  </button>
+                </div>
               </div>
 
               {/* Image Section */}
@@ -279,37 +239,13 @@ export const HeroSection = () => {
       {/* Custom Navigation - Positioned on sides like modern hero sections */}
       <div className="absolute inset-0 z-20 pointer-events-none">
         {/* Left Navigation Button */}
-        <button className="hero-prev absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-dark-2 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-all pointer-events-auto">
-          <svg
-            className="w-6 h-6 lg:w-7 lg:h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+        <button className="hero-prev cursor-pointer absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-dark-2 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-all pointer-events-auto">
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
         </button>
 
         {/* Right Navigation Button */}
-        <button className="hero-next absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-dark-4 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-all pointer-events-auto">
-          <svg
-            className="w-6 h-6 lg:w-7 lg:h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+        <button className="hero-next cursor-pointer absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-dark-4 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-all pointer-events-auto">
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
         </button>
 
         {/* Pagination - Positioned at bottom center */}

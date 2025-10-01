@@ -31,7 +31,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // ✅ Fixed JS version 
+  // ✅ Fixed JS version
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -41,9 +41,8 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md contanier mx-auto">
       {/* Top Bar */}
-      <div className="bg-gray-7 hidden sm:flex justify-center lg:justify-between items-center h-12 px-5 xl:px-40  ">
-        <div className="flex items-center text-dark-4 space-x-4">
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
+      <div className="bg-gradient-to-r from-primary to-gray-100  transition hidden sm:flex justify-center lg:justify-between items-center h-12 px-5 xl:px-40  ">
+        <div className="flex items-center text-dark-2 space-x-4">
           <span>
             <FiPhone />
           </span>
@@ -53,7 +52,7 @@ const Header = () => {
           >
             (239) 555-0108
           </span>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
+
           <span>
             <MdOutlineEmail />
           </span>
@@ -63,25 +62,24 @@ const Header = () => {
           >
             info@safecareind.xyz
           </span>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
         </div>
 
         <div className="hidden lg:flex items-center space-x-4">
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
+          <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
           <a href="#facebook" className="hover:scale-125">
-            <RiFacebookFill />
+            <RiFacebookFill size={20}/>
           </a>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
-          <a href="#twitter" className="hover:scale-125">
-            <FaXTwitter />
+          <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
+          <a href="#twitter" className="hover:scale-125 ">
+            <FaXTwitter size={20}/>
           </a>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
-          <a href="#instagram" className="hover:scale-125">
-            <LuInstagram />
+          <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
+          <a href="#instagram" className="hover:scale-125 ">
+            <LuInstagram size={20}/>
           </a>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
-          <a href="#linkedin" className="hover:scale-125">
-            <RxLinkedinLogo />
+          <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
+          <a href="#linkedin" className="hover:scale-125 ">
+            <RxLinkedinLogo size={20}/>
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
         </div>
@@ -117,7 +115,7 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4 ">
-                <a href="#about"  className="hover:text-primary">
+                <a href="#about" className="hover:text-primary">
                   About Us
                 </a>
                 <div>
@@ -128,7 +126,7 @@ const Header = () => {
             <li>
               <div className="flex items-center space-x-4">
                 <a href="#ourbrands" className="hover:text-primary">
-                 Our Brands
+                  Our Brands
                 </a>
                 <div>
                   <span>/</span>

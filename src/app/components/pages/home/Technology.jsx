@@ -46,19 +46,29 @@ const TechnologyGrid = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gray-8 py-16 px-6 lg:px-12 overflow-hidden">
+    <section className="relative min-h-screen bg-gray-7/20 py-16 px-6 lg:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto pt-20">
         {/* Header */}
         <motion.div
-          className="text-center mb-14"
+          className="text-center space-y-5 mb-14"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
+          <h2 className="text-3xl md:text-5xl  font-bold bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
             We Are Also in the Technology
           </h2>
+          <div className="flex justify-center">
+            {/* Divider */}
+            <motion.div
+              className="mx-auto lg:mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            />
+          </div>
           <p className="text-gray-500 text-lg sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto">
             From digital marketing to networking and hosting, we provide
             end-to-end technology solutions that help businesses grow, connect,
@@ -110,32 +120,6 @@ const TechnologyGrid = () => {
           ))}
         </div>
       </div>
-
-      {/* Floating Background Blobs */}
-      <motion.div
-        className="absolute top-1/12 -left-10 w-60 h-60 bg-primary/60 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: false }}
-        animate={{ y: [0, -20, 0] }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-1/12 -right-10 w-72 h-72 bg-primary/60 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: false }}
-        animate={{ y: [0, 20, 0] }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
     </section>
   );
 };

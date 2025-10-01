@@ -38,9 +38,10 @@ const ProductsServices = () => {
   ];
 
   return (
-    <section 
-    id="services"
-    className="scroll-mt-30 bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20 overflow-hidden">
+    <section
+      id="services"
+      className="scroll-mt-30 bg-gray-7/20 text-dark-2 py-12 lg:py-20 px-5 lg:px-20 overflow-hidden"
+    >
       <div className="container mx-auto space-y-12">
         {/* Heading Section */}
         <motion.div
@@ -54,7 +55,14 @@ const ProductsServices = () => {
             Products & Services
           </h2>
           <div className="flex justify-center">
-            <div className="w-20 sm:w-32 md:w-44 :w-[244px] h-0.5 bg-gray-4"></div>
+            {/* Divider */}
+            <motion.div
+              className="mx-auto lg:mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            />
           </div>
           <p className="text-lg sm:text-base md:text-lg lg:text-[22px] leading-relaxed">
             The medical field demands the highest quality medical supplies and

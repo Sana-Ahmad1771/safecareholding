@@ -66,10 +66,16 @@ const SpecialServices = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+            <h2 className="font-semibold mb-2 text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
               Special Services
             </h2>
-            <div className="border border-primary bg-primary h-1 w-12 mt-3"></div>
+            <motion.div
+              className="border bg-primary border-primary w-12 h-1 mx-auto lg:mx-0 mb-4"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            />
           </motion.div>
 
           {servicesLeft.map((service, index) => (
