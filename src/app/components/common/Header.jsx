@@ -125,8 +125,8 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <a href="#services" className="hover:text-primary">
-                  Services
+                <a href="#quality" className="hover:text-primary">
+                 Quality
                 </a>
                 <div>
                   <span>/</span>
@@ -135,8 +135,8 @@ const Header = () => {
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <a href="#quality" className="hover:text-primary">
-                  Quality
+                <a href="#services" className="hover:text-primary">
+                  Services
                 </a>
                 <div>
                   <span>/</span>

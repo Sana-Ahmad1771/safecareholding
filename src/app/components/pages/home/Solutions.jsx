@@ -25,7 +25,7 @@ const brands = [
 const Solutions = () => {
   return (
     <section className="bg-gray-7/40">
-      <div className="container mx-auto sm:px-6 max-w-[1460px] lg:pb-30 py-12 px-5 lg:px-20">
+      <div className="container overflow-hidden mx-auto sm:px-6 max-w-[1460px] lg:pb-30 py-12 px-5 lg:px-20">
         {/* Brand Highlights Section */}
         <motion.div
           className="mt-16 sm:mt-20"

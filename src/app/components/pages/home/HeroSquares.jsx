@@ -22,7 +22,7 @@ function HeroSquares() {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full flex items-center justify-center z-0 pointer-events-none overflow-hidden hidden sm:block">
+    <div className="absolute inset-0 w-full h-full items-center justify-center z-0 pointer-events-none overflow-hidden hidden sm:block">
       {/* Fixed Square (lighter) */}
       <div className="fixed-square absolute left-[10%] top-1/2 -translate-y-1/2 w-16 h-16">
         <div className="absolute inset-0 bg-primary/20 rounded-lg shadow-lg border border-primary/30"></div>

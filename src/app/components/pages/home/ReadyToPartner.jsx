@@ -8,7 +8,7 @@ const ReadyToPartner = () => {
     
         {/* CTA Section */}
         <motion.div
-          className="text-center bg-gradient-to-r from-[#1eb7b1] to-[#159a95] rounded-2xl p-8 sm:p-12 text-white"
+          className="text-center overflow-hidden bg-gradient-to-r from-[#1eb7b1] to-[#159a95] rounded-2xl p-8 sm:p-12 text-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}

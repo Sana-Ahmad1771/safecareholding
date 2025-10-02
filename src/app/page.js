@@ -14,6 +14,7 @@ import GroupStrategy from './components/pages/home/StrategicApproach.jsx';
 import Solutions from './components/pages/home/Solutions.jsx';
 import ReadyToPartner from './components/pages/home/ReadyToPartner.jsx';
 import Gallery from './components/pages/home/Gallery.jsx';
+import Milestones from './components/pages/home/Milestones.jsx';
 // import Testing from './components/pages/home/testing.jsx';
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
     <GroupStrategy />
     <OurBrands />
     <QualityProducts />
+    <Milestones />
     <ProductsServices />
     <SpecialServices />
     {/* <Testing /> */}

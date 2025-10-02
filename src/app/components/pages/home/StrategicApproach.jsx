@@ -31,7 +31,7 @@ const GroupStrategy = () => {
     <section
       id="strategy"
       ref={sectionRef}
-      className="relative scroll-mt-50 px-4 sm:px-8 lg:px-20 py-12 lg:pb-16 lg:pt-40 bg-body text-dark-2"
+      className="relative overflow-hidden scroll-mt-50 px-4 sm:px-8 lg:px-20 py-12 lg:pb-16 lg:pt-40 bg-body text-dark-2"
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         {/* Image Section */}
@@ -43,7 +43,7 @@ const GroupStrategy = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Image
-            src="/Building-2.png"
+            src="/safecare.png"
             alt="Safecare Group Strategy"
             width={600}
             height={400}
