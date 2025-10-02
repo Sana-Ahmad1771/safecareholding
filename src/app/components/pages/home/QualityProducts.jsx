@@ -182,7 +182,7 @@ const QualityProducts = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-5xl leading-snug">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug">
             Committed To Deliver <br className="hidden sm:block" /> Quality
             Products
           </h2>

@@ -55,9 +55,9 @@ const SpecialServices = () => {
 
   return (
     <section className="bg-body text-dark-2 overflow-hidden">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row ">
         {/* Left column */}
-        <div className="w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:h-[820px] flex flex-col justify-center lg:items-end space-y-10">
+        <div className="w-full lg:flex-1 py-20 px-5 lg:px-20 min-h-[700px] lg:max-h-[920px] flex flex-col justify-center lg:items-end space-y-10">
           {/* Heading */}
           <motion.div
             className="mb-8 lg:mb-12 w-full text-left max-w-2xl"
@@ -66,11 +66,12 @@ const SpecialServices = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h2 className="font-semibold mb-2 text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Healthcare <span className="text-primary">Management</span> Systems
+            <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
+              Healthcare <br /> <span className=" text-primary">Management</span> Systems
             </h2>
+            {/* divider */}
             <motion.div
-              className="border bg-primary border-primary w-12 h-1 mx-auto lg:mx-0 mb-4"
+              className="border bg-primary border-primary w-12 h-1 lg:mx-0 mb-4"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: false }}
@@ -114,7 +115,7 @@ const SpecialServices = () => {
         </div>
 
         {/* Right column */}
-        <div className="relative w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:h-[820px] flex flex-col justify-center lg:items-end space-y-10">
+        <div className="relative w-full lg:flex-1 py-12 lg:py-20 px-5 lg:px-20 min-h-[600px] lg:max-h-[920px] flex flex-col justify-center lg:items-end space-y-10">
           {/* Background image */}
           <div
             className="absolute z-30 right-0 top-0 w-[100%] lg:flex-1 min-h-full lg:h-full bg-no-repeat bg-cover bg-center"
@@ -125,17 +126,24 @@ const SpecialServices = () => {
 
           {/* Transparent heading placeholder for spacing */}
           <motion.div
-            className="mb-8 lg:mb-12 w-full text-left max-w-2xl text-transparent"
+            className="hidden lg:block mb-8 lg:mb-12 w-full text-left max-w-2xl text-transparent"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Healthcare Management Systems
+             <h2 className="text-3xl md:text-5xl  font-bold bg-transparent text-transparent bg-clip-text mb-6">
+              Healthcare <br /> <span className="block text-transparent">Management</span> Systems
             </h2>
-            <div className="border-transparent border bg-transparent h-1 w-12 mt-3"></div>
-             <motion.p
+            {/* divider */}
+            <motion.div
+              className="border bg-transparent border-transparent w-12 h-1 lg:mx-0 mb-4"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            />
+            <motion.p
               className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

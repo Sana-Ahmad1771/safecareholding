@@ -59,13 +59,13 @@ const GroupStrategy = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
             Our Strategic Approach
           </h2>
 
           {/* Divider */}
           <motion.div
-            className="mx-auto lg:mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
+            className="mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
             variants={{
               hidden: { scaleX: 0, opacity: 0 },
               visible: { scaleX: 1, opacity: 1, transition: { duration: 0.6, delay: 0.2 } },

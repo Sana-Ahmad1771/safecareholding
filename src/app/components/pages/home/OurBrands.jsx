@@ -103,7 +103,7 @@ const OurBrands = () => {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+            <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
               Our Healthcare Ecosystem
             </h2>
             <motion.div

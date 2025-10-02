@@ -51,7 +51,7 @@ const ProductsServices = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="text-center max-w-2xl mx-auto space-y-4"
         >
-          <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug">
             Core Healthcare Products
           </h2>
           <div className="flex justify-center">

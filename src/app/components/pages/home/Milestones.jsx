@@ -93,7 +93,7 @@ const Milestones = () => {
             </span>
           </motion.div>
 
-          <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
             Our{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
               Journey
@@ -161,11 +161,11 @@ const Milestones = () => {
                   </div>
 
                   <div className="text-center lg:text-left flex-1">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-dark-2 mb-4 leading-tight">
+                    <h3 className="text-lg lg:text-2xl font-bold text-dark-2 mb-4 leading-tight">
                       {milestones[activeMilestone].title}
                     </h3>
 
-                    <p className="text-lg text-dark-2/80 leading-relaxed">
+                    <p className="text-md lg:text-lg text-dark-2/80 leading-relaxed">
                       {milestones[activeMilestone].description}
                     </p>
                   </div>

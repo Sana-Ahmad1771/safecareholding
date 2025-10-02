@@ -64,10 +64,10 @@ const AboutUs = () => {
           <div className="flex flex-col gap-4 md:gap-6">
             <motion.h2
               variants={itemVariants}
-              className="font-semibold mb-4 text-dark-2 text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-5xl leading-snug tracking-tight lg:leading-16 max-w-full"
+              className="font-semibold mb-4 text-dark-2  text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug tracking-tight lg:leading-16 max-w-full"
             >
-              The healthcare partner{" "}
-              <span className="font-serif italic text-primary text-[34px] sm:text-[39px] md:text-[49px] lg:text-[59px] xl:text-[64px]">
+              The healthcare partner{" "} <br />
+              <span className="font-serif italic text-primary sm:text-3xl md:text-4xl lg:text-[48px] xl:text-6xl">
                 you can trust
               </span>
             </motion.h2>

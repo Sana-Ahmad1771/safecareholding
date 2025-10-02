@@ -56,7 +56,7 @@ const TechnologyGrid = () => {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl  font-bold bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
+          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
             Digital Transformation Services
           </h2>
           <div className="flex justify-center">

@@ -33,7 +33,7 @@ const Solutions = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="font-semibold mb-10 text-center text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
+          <h3 className="font-semibold mb-10 text-center text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
             Comprehensive Healthcare Solutions
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
