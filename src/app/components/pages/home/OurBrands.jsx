@@ -35,7 +35,7 @@ const OurBrands = () => {
       hoverTitle: "Healthcare Infrastructure Solutions",
       description:
         "Building and supporting the essential healthcare infrastructure including hospital supplies, surgical equipment, and facility management systems for modern medical institutions.",
-      image: "/product-1.png",
+      image: "/gallery-3.png",
     },
     {
       id: 4,

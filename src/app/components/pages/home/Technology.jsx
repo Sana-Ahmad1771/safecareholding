@@ -57,7 +57,7 @@ const TechnologyGrid = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl  font-bold bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
-            We Are Also in the Technology
+            Digital Transformation Services
           </h2>
           <div className="flex justify-center">
             {/* Divider */}
@@ -70,9 +70,9 @@ const TechnologyGrid = () => {
             />
           </div>
           <p className="text-gray-500 text-lg sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto">
-            From digital marketing to networking and hosting, we provide
-            end-to-end technology solutions that help businesses grow, connect,
-            and thrive in the digital era.
+            Comprehensive technology solutions that power modern healthcare
+            organizations with digital marketing, custom software development,
+            and IT infrastructure.
           </p>
         </motion.div>
 

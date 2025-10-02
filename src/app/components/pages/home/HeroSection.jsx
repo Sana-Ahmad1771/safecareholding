@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import HeroSquares from "./HeroSquares";
 
 export const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -71,6 +72,8 @@ export const HeroSection = () => {
         height: "calc(100vh - 80px)",
       }}
     >
+      {/* 🔹 Animated Squares */}
+      <HeroSquares />
       {/* Dynamic Background with gradient change */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${currentSlide.background} transition-all duration-1000`}
@@ -193,7 +196,7 @@ export const HeroSection = () => {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 ">
                   <button className="px-6 sm:px-8 py-3 flex gap-3 justify-center items-center bg-primary text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-colors duration-200 shadow-lg">
-                    Explore Services  <ChevronRight size={20}/>
+                    Explore Services <ChevronRight size={20} />
                   </button>
                   <button className="px-6 sm:px-8 flex gap-3 justify-center items-center py-3 border-2 border-white hover:border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200">
                     Contact Us <MessageCircle size={20} />

@@ -67,7 +67,7 @@ const SpecialServices = () => {
             viewport={{ once: false, amount: 0.2 }}
           >
             <h2 className="font-semibold mb-2 text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Special Services
+              Healthcare <span className="text-primary">Management</span> Systems
             </h2>
             <motion.div
               className="border bg-primary border-primary w-12 h-1 mx-auto lg:mx-0 mb-4"
@@ -76,12 +76,23 @@ const SpecialServices = () => {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.3 }}
             />
+            <motion.p
+              className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Specialized software solutions and management systems that
+              streamline healthcare operations, improve patient care
+              coordination, and enhance administrative efficiency.
+            </motion.p>
           </motion.div>
 
           {servicesLeft.map((service, index) => (
             <motion.div
               key={index}
-              className="flex gap-4 items-start max-w-2xl flex-col sm:flex-row"
+              className="flex gap-4 items-start max-w-2xl flex-col sm:flex-row border-primary-20 shadow-primary/30 shadow-md p-2"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -121,15 +132,26 @@ const SpecialServices = () => {
             viewport={{ once: false, amount: 0.2 }}
           >
             <h2 className="font-semibold text-lg sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Special Services
+              Healthcare Management Systems
             </h2>
             <div className="border-transparent border bg-transparent h-1 w-12 mt-3"></div>
+             <motion.p
+              className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Specialized software solutions and management systems that
+              streamline healthcare operations, improve patient care
+              coordination, and enhance administrative efficiency.
+            </motion.p>
           </motion.div>
 
           {servicesRight.map((service, index) => (
             <motion.div
               key={index}
-              className="flex relative z-40 gap-4 items-start max-w-2xl flex-col sm:flex-row"
+              className="flex relative z-40 gap-4 items-start max-w-2xl flex-col sm:flex-row border-gray-5 shadow-dark-2/30 shadow-md p-2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}

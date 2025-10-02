@@ -52,7 +52,7 @@ const ProductsServices = () => {
           className="text-center max-w-2xl mx-auto space-y-4"
         >
           <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-            Products & Services
+            Core Healthcare Products
           </h2>
           <div className="flex justify-center">
             {/* Divider */}
@@ -65,8 +65,9 @@ const ProductsServices = () => {
             />
           </div>
           <p className="text-lg sm:text-base md:text-lg lg:text-[22px] leading-relaxed">
-            The medical field demands the highest quality medical supplies and
-            equipment. Safecare’s line of medical products includes:
+            Essential medical supplies, consumables, and equipment that form the
+            foundation of daily healthcare operations in hospitals, clinics, and
+            care facilities worldwide.
           </p>
         </motion.div>
 
