@@ -75,7 +75,7 @@ const Milestones = () => {
 
   return (
     <section
-      className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-8 to-gray-9 overflow-hidden bg-center bg-no-repeat bg-cover"
+      className="relative py-10 lg:py-32 bg-gradient-to-br from-gray-8 to-gray-9 overflow-hidden bg-center bg-no-repeat bg-cover"
       style={{
         backgroundImage: "url('/bg-mile.png')",
       }}
@@ -94,10 +94,11 @@ const Milestones = () => {
           </motion.div>
 
           <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
-            Our Journey of
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Excellence
-            </span>
+            Our{" "}
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+              Journey
+            </span>{" "}
+            of Excellence
           </h2>
 
           <motion.div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8 shadow-lg" />
