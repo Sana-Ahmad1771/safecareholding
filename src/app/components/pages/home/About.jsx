@@ -66,37 +66,36 @@ const AboutUs = () => {
               variants={itemVariants}
               className="font-semibold mb-4 text-dark-2  text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug tracking-tight lg:leading-16 max-w-full"
             >
-              The healthcare partner{" "} <br />
+              Precision Medical Manufacturing <br />
               <span className="font-serif italic text-primary sm:text-3xl md:text-4xl lg:text-[48px] xl:text-6xl">
-                you can trust
+                in Abu Dhabi
               </span>
             </motion.h2>
 
-            <motion.h5
+            <motion.p
               variants={itemVariants}
               className="max-w-full leading-relaxed md:leading-relaxed font-light text-dark-5"
               style={{ fontSize: "clamp(1rem,2vw,1.25rem)" }}
             >
               Welcome to{" "}
               <span className="font-semibold">Safecare Holding Company</span>, a
-              dynamic group of companies operating in various sectors of the
-              healthcare industry. With a strong focus on delivering
-              high-quality products and services, Safecare Holding Company has
-              established itself as a trusted and reliable partner in the
-              market.
-            </motion.h5>
+              dynamic group specializing in medical manufacturing and healthcare
+              supply chain solutions. With our state-of-the-art manufacturing
+              facilities in Kizad, Abu Dhabi, we produce high-quality surgical
+              kits, PPE, and medical consumables for healthcare providers across
+              the region.
+            </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="leading-relaxed text-dark-5"
               style={{ fontSize: "clamp(1rem,2vw,1.25rem)" }}
             >
-              At Safecare Holding Company, we are committed to transforming the
-              healthcare landscape by providing innovative solutions and
-              exceptional customer experiences. With a diverse portfolio of
-              subsidiaries, we cover a wide range of healthcare needs, ensuring
-              that individuals and organizations have access to the best
-              products and services available.
+              Our integrated approach combines precision manufacturing with
+              efficient distribution, ensuring healthcare facilities have
+              reliable access to essential medical supplies. From raw materials
+              to finished products, we maintain complete quality control
+              throughout our manufacturing process.
             </motion.p>
           </div>
         </motion.div>

@@ -12,6 +12,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { AlignRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import MegaMenu from "./megamenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -123,10 +124,16 @@ const Header = () => {
                 </div>
               </div>
             </li>
+            <li className="flex items-center space-x-4">
+              <MegaMenu />
+              <div>
+                <span>/</span>
+              </div>
+            </li>
             <li>
               <div className="flex items-center space-x-4">
                 <a href="#quality" className="hover:text-primary">
-                 Quality
+                  Quality
                 </a>
                 <div>
                   <span>/</span>
@@ -192,6 +199,11 @@ const Header = () => {
                   <li>
                     <Link href="/about" className="hover:text-primary">
                       About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="hover:text-primary">
+                      Our Brands
                     </Link>
                   </li>
                   <li>

@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaRocket,
-  FaHospital,
-  FaPills,
-  FaLaptop,
-  FaNetworkWired,
-  FaGlobe,
+  FaIndustry,
   FaAward,
+  FaGlobe,
+  FaShieldAlt,
+  FaBoxes,
+  FaSyringe,
 } from "react-icons/fa";
 
 const Milestones = () => {
@@ -17,57 +17,50 @@ const Milestones = () => {
   const milestones = [
     {
       year: "2008",
-      title: "Foundation of SafeCare Holding",
-      description:
-        "Established with a vision to transform the healthcare landscape in the UAE and beyond, starting with medical equipment distribution.",
+      title: "Medical Manufacturing Foundation",
+      description: "Established first manufacturing facility in Abu Dhabi specializing in medical components.",
       icon: <FaRocket className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2012",
-      title: "Pharmaceutical Division Launch",
-      description:
-        "Expanded into pharmaceutical manufacturing and distribution with our Jurhy brand, focusing on high-quality generic medications.",
-      icon: <FaPills className="text-2xl" />,
+      title: "Surgical Kits Division",
+      description: "Launched surgical procedure kits production with advanced cleanroom facilities.",
+      icon: <FaSyringe className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2015",
-      title: "Technology Integration",
-      description:
-        "Launched SafeCare Technology division, bringing digital health solutions and management systems to healthcare providers.",
-      icon: <FaLaptop className="text-2xl" />,
-      gradient: "from-primary to-accent",
-    },
-    {
-      year: "2018",
-      title: "Multi-Brand Portfolio",
-      description:
-        "Reached 6 specialized healthcare brands under the SafeCare umbrella, creating a comprehensive healthcare ecosystem.",
-      icon: <FaHospital className="text-2xl" />,
-      gradient: "from-primary to-accent",
-    },
-    {
-      year: "2020",
-      title: "Healthcare Infrastructure Excellence",
-      description:
-        "Expanded into hospital infrastructure and facility management, supporting healthcare institutions during critical times.",
-      icon: <FaNetworkWired className="text-2xl" />,
-      gradient: "from-primary to-accent",
-    },
-    {
-      year: "2023",
-      title: "Digital Health Leadership",
-      description:
-        "Became a leading provider of integrated digital health platforms, serving over 50 healthcare partners across the region.",
+      title: "Quality Certification",
+      description: "Achieved ISO 13485 certification for medical device manufacturing standards.",
       icon: <FaAward className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
+      year: "2018",
+      title: "Multi-Brand Expansion",
+      description: "Expanded to 6 specialized companies under Safecare manufacturing ecosystem.",
+      icon: <FaBoxes className="text-2xl" />,
+      gradient: "from-primary to-accent",
+    },
+    {
+      year: "2020",
+      title: "PPE Production Scale-up",
+      description: "Rapidly scaled PPE manufacturing to meet critical healthcare demands.",
+      icon: <FaShieldAlt className="text-2xl" />,
+      gradient: "from-primary to-accent",
+    },
+    {
+      year: "2023",
+      title: "Sterilization Facility",
+      description: "Commissioned advanced EO and gamma sterilization services.",
+      icon: <FaIndustry className="text-2xl" />,
+      gradient: "from-primary to-accent",
+    },
+    {
       year: "2024",
-      title: "Global Supply Chain",
-      description:
-        "Established comprehensive global supply chain operations, ensuring reliable healthcare product delivery worldwide.",
+      title: "Regional Leadership",
+      description: "Became leading medical manufacturer in GCC region with expanded distribution.",
       icon: <FaGlobe className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
@@ -83,25 +76,24 @@ const Milestones = () => {
       {/* Enhanced Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/80 to-primary/5 backdrop-blur-[4px] "></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="flex container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-16 lg:mb-20">
+        <motion.div className="mb-16 lg:mb-20">
           <motion.div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6 border border-primary/20">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-primary rounded-full "></div>
             <span className="text-primary font-semibold text-sm uppercase tracking-wide">
-              Our Journey
+              Our Growth
             </span>
           </motion.div>
 
-          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
-            Our{" "}
-            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Journey
-            </span>{" "}
-            of Excellence
+          <h2 className="font-semibold text-left text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
+            Manufacturing{" "} <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+              Excellence <br /> Timeline
+            </span>
           </h2>
 
-          <motion.div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8 shadow-lg" />
+          <motion.div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full lg:mx-0 sm:mx-auto mb-8 shadow-lg" />
         </motion.div>
 
         {/* Timeline Section */}
@@ -148,7 +140,7 @@ const Milestones = () => {
             </div>
 
             {/* Milestone Content */}
-            <div className="mt-16 lg:mt-20 w-full max-w-4xl">
+            <div className="mt-16 lg:mt-20 w-4xl">
               <motion.div
                 key={activeMilestone}
                 className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-2xl border border-gray-200/60"

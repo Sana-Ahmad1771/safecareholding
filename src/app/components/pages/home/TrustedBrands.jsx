@@ -15,11 +15,11 @@ function HorizontalSlider({ brands, direction = "left", speed = 30 }) {
     }
   }, [brands]);
 
-  const brandList = [...brands, ...brands]; // duplicate for seamless loop
+  const brandList = [...brands, ...brands];
 
   return (
     <div className="relative overflow-hidden w-full py-3 sm:py-4 md:py-5">
-      {/* Gradient Overlays - Responsive widths */}
+      {/* Gradient Overlays */}
       <div className="pointer-events-none absolute top-0 left-0 h-full w-8 sm:w-12 md:w-16 lg:w-20 z-20 bg-gradient-to-r from-body to-transparent" />
       <div className="pointer-events-none absolute top-0 right-0 h-full w-8 sm:w-12 md:w-16 lg:w-20 z-20 bg-gradient-to-l from-body to-transparent" />
 
@@ -50,10 +50,6 @@ function HorizontalSlider({ brands, direction = "left", speed = 30 }) {
               className="h-full w-full max-w-full object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
               sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 128px"
             />
-            {/* Tooltip on hover */}
-            <div className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap pointer-events-none">
-              {brand.name}
-            </div>
           </div>
         ))}
       </motion.div>
@@ -65,30 +61,28 @@ function HorizontalSlider({ brands, direction = "left", speed = 30 }) {
 const TrustedBrands = () => {
   const brands = [
     {
-      name: "Binali",
+      name: "Safecare Medical Industries",
+      logo: "/safecaremedicalindustries.png",
+    },
+    {
+      name: "Jurhy",
+      logo: "/jurhy.png",
+    },
+    {
+      name: "Binali Medical Supplies",
       logo: "/binali.png",
-      description: "Healthcare solutions",
     },
     {
-      name: "Care Medical",
+      name: "Care Medical Trading",
       logo: "/caremedical.png",
-      description: "Medical equipment",
-    },
-    { name: "Jurhy", logo: "/jurhy.png", description: "Pharmaceuticals" },
-    {
-      name: "Safefast",
-      logo: "/safefast.png",
-      description: "Rapid diagnostics",
     },
     {
       name: "Safecare Technology",
       logo: "/safecaretechnology.png",
-      description: "Health tech innovation",
     },
     {
-      name: "Safecare Medical Industries",
-      logo: "/safecaremedicalindustries.png",
-      description: "Medical manufacturing",
+      name: "Safefast",
+      logo: "/safefast.png",
     },
   ];
 
@@ -107,7 +101,6 @@ const TrustedBrands = () => {
             Our Trusted Brands
           </h2>
           <div className="flex justify-center">
-            {/* Divider */}
             <motion.div
               className="mx-auto lg:mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
               initial={{ scaleX: 0 }}
@@ -117,12 +110,11 @@ const TrustedBrands = () => {
             />
           </div>
           <p className="text-lg sm:text-base md:text-lg lg:text-[22px] leading-relaxed">
-            Discover our diverse portfolio of healthcare brands, each dedicated
-            to excellence and innovation in medical care and technology.
+            Six specialized companies united in medical manufacturing excellence.
           </p>
         </motion.div>
 
-        {/* First Row: Right to Left */}
+        {/* Slider */}
         <HorizontalSlider brands={brands} direction="left" speed={25} />
       </div>
     </section>

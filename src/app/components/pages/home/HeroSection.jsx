@@ -20,9 +20,9 @@ export const HeroSection = () => {
       title: "Safecare",
       subtitle: "Holding Company",
       description:
-        "Leading healthcare innovation with trusted solutions and exceptional services across multiple brands.",
+        "Leading manufacturer of sterile surgical procedure kits, PPE, and healthcare consumables from our state-of-the-art Abu Dhabi facilities.Leading healthcare innovation with trusted solutions and exceptional services across multiple brands.",
       image: "/hero-men.png",
-      badge: "TRUSTED HEALTHCARE SOLUTIONS",
+      badge: "ISO 13485 CERTIFIED MANUFACTURING",
       background: "from-primary/20 to-accent/20",
       blob1: "bg-primary/20",
       blob2: "bg-accent/20",

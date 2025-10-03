@@ -15,49 +15,30 @@ const OurBrands = () => {
   const cards = [
     {
       id: 1,
-      title: "Pharmaceutical\nExcellence",
-      hoverTitle: "Pharmaceutical Excellence Division",
-      description:
-        "Leading the development and manufacturing of high-quality generic medications, specialty drugs, and innovative pharmaceutical solutions that improve patient outcomes worldwide.",
+      title: "Manufacturing\nDivision",
+      hoverTitle: "Precision Manufacturing Division",
+      description: "Safecare Medical Industries & Jurhy produce surgical kits, PPE, and medical components in ISO-certified Abu Dhabi facilities.",
       image: "/product-1.png",
     },
     {
       id: 2,
-      title: "Medical Technology\nInnovation",
-      hoverTitle: "Medical Technology Innovation",
-      description:
-        "Pioneering cutting-edge medical devices, diagnostic equipment, and digital health solutions that transform healthcare delivery and enhance clinical decision-making.",
+      title: "Distribution\nNetwork",
+      hoverTitle: "Supply Chain Solutions",
+      description: "Binali Medical Supplies & Care Medical Trading provide end-to-end logistics and distribution across the healthcare sector.",
       image: "/card-2.png",
     },
     {
       id: 3,
-      title: "Healthcare\nInfrastructure",
-      hoverTitle: "Healthcare Infrastructure Solutions",
-      description:
-        "Building and supporting the essential healthcare infrastructure including hospital supplies, surgical equipment, and facility management systems for modern medical institutions.",
+      title: "Technology\nSolutions",
+      hoverTitle: "Digital Innovation",
+      description: "Safecare Technology & Safefast develop management systems and tech-enabled logistics for modern healthcare operations.",
       image: "/gallery-3.png",
-    },
-    {
-      id: 4,
-      title: "Digital Health\nPlatforms",
-      hoverTitle: "Digital Health Platforms",
-      description:
-        "Developing integrated digital health ecosystems including telemedicine, health records management, and patient engagement platforms that connect providers and patients seamlessly.",
-      image: "/product-2.png",
-    },
-    {
-      id: 5,
-      title: "Global Supply\nChain",
-      hoverTitle: "Global Healthcare Supply Chain",
-      description:
-        "Managing end-to-end logistics, distribution, and supply chain solutions ensuring reliable delivery of critical healthcare products to partners across the globe.",
-      image: "/gallery-2.png",
     },
   ];
 
   return (
     <section
-      className="relative scroll-mt-40 overflow-hidden lg:py-20 py-12 px-5 lg:px-10 xl:px-20 flex items-end justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
+      className="scroll-mt-40 overflow-hidden py-12 px-5 lg:px-10 xl:px-20 flex items-center justify-center text-dark-2 bg-no-repeat bg-cover bg-center lg:h-[765px]"
       style={{
         backgroundImage: "url('/ourbrands-bg.png')",
       }}
@@ -66,7 +47,7 @@ const OurBrands = () => {
         className="w-full h-auto flex lg:flex-col flex-col-reverse"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: false, amount: 0.2 }} // re-animates when scrolled back
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8 }}
       >
         {/* Navigation Buttons */}
@@ -94,7 +75,7 @@ const OurBrands = () => {
         </div>
 
         {/* content + cards */}
-        <div className="container mx-auto h-full flex flex-col lg:flex-row items-end justify-between gap-10 lg:gap-16">
+        <div className="container mx-auto h-full flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
           {/* Text Section */}
           <motion.div
             className="lg:w-3/5 w-full space-y-6 text-white text-center lg:text-left"
@@ -104,7 +85,7 @@ const OurBrands = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-              Our Healthcare Ecosystem
+              Our Manufacturing Ecosystem
             </h2>
             <motion.div
               className="border bg-white border-white w-12 h-1 mx-auto lg:mx-0 mb-4"
@@ -120,10 +101,7 @@ const OurBrands = () => {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              A fully integrated network of healthcare specialists united under
-              the Safecare vision. From pharmaceuticals to digital health, our
-              ecosystem delivers end-to-end solutions that transform patient
-              care and advance medical innovation.
+              Three integrated divisions working together to deliver complete medical manufacturing and supply chain solutions from Abu Dhabi.
             </motion.p>
           </motion.div>
 
@@ -160,9 +138,13 @@ const OurBrands = () => {
                 <SwiperSlide key={card.id}>
                   <motion.div
                     className="relative w-full h-[404px] rounded-2xl overflow-hidden cursor-pointer"
-                    whileHover="hover"
                     initial="rest"
+                    whileHover="hover"
                     animate="rest"
+                    variants={{
+                      rest: {},
+                      hover: {},
+                    }}
                   >
                     {/* Background Image */}
                     <div

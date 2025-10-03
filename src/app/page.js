@@ -2,7 +2,7 @@ import Header from './components/common/Header.jsx';
 import AboutUs from './components/pages/home/StrategicApproach.jsx';
 import Hero from './components/pages/home/Hero.jsx';
 import TrustedBrands from './components/pages/home/TrustedBrands.jsx';
-import OurBrands from './components/pages/home/OurBrands.jsx';
+import OurHealthcare from './components/pages/home/OurBrands.jsx';
 import QualityProducts from './components/pages/home/QualityProducts.jsx';
 import ProductsServices from './components/pages/home/ProductsServices.jsx';
 import SpecialServices from './components/pages/home/SpecialServices.jsx';
@@ -28,12 +28,12 @@ export default function Home() {
     <About />
     <Solutions />
     <GroupStrategy />
-    <OurBrands />
+    <OurHealthcare/>
     <QualityProducts />
-    <Milestones />
     <ProductsServices />
     <SpecialServices />
     {/* <Testing /> */}
+     <Milestones />
     <TechnologyGrid />
     <Gallery />
     <ReadyToPartner />

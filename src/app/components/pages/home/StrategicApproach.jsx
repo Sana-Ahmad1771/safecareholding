@@ -6,7 +6,6 @@ import { motion, useInView } from "framer-motion";
 const GroupStrategy = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
-  // ✅ triggers when ~30% visible, resets when fully out
 
   const fadeSlideLeft = {
     hidden: { opacity: 0, x: -80 },
@@ -39,12 +38,12 @@ const GroupStrategy = () => {
           className="flex-1 flex justify-center items-center relative z-40"
           variants={fadeSlideLeft}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"} // 👈 in and out
+          animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Image
             src="/safecare.png"
-            alt="Safecare Group Strategy"
+            alt="Safecare Manufacturing Facility"
             width={600}
             height={400}
             className="xl:absolute rounded-2xl lg:z-40 w-full max-w-[clamp(320px,40vw,600px)] h-auto max-h-[clamp(280px,100vh,500px)] lg:max-h-[clamp(300px,100vh,650px)] xl:max-h-[clamp(600px,100vh,750px)]"
@@ -60,10 +59,9 @@ const GroupStrategy = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl">
-            Our Strategic Approach
+            Our Manufacturing Strategy
           </h2>
 
-          {/* Divider */}
           <motion.div
             className="mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
             variants={{
@@ -81,10 +79,9 @@ const GroupStrategy = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <span className="font-semibold">Safecare Holding Company</span>{" "}
-            operates on a powerful multi-brand strategy that allows each
-            subsidiary to excel in its specialized domain while benefiting from
-            group-wide resources, shared expertise, and collective innovation.
+            <span className="font-semibold">Safecare Holding Company</span> operates 
+            on an integrated manufacturing strategy that combines precision production 
+            with efficient supply chain management.
           </motion.p>
 
           <motion.p
@@ -94,11 +91,9 @@ const GroupStrategy = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            This holding company model enables us to maintain focused excellence
-            across pharmaceuticals, medical equipment, healthcare technology,
-            and consumer health products—creating a comprehensive ecosystem that
-            serves every aspect of the healthcare value chain under the Safecare
-            umbrella.
+            Our vertical integration allows complete quality control from raw materials 
+            to finished products, ensuring excellence across surgical kits, PPE, and 
+            medical consumables.
           </motion.p>
 
           <motion.p
@@ -108,9 +103,9 @@ const GroupStrategy = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            By leveraging shared infrastructure, research capabilities, and
-            market intelligence, we drive innovation faster and deliver greater
-            value to healthcare providers, partners, and patients worldwide.
+            By leveraging shared manufacturing infrastructure and quality systems, 
+            we drive operational efficiency and deliver greater value to healthcare 
+            providers across the region.
           </motion.p>
         </motion.div>
       </div>

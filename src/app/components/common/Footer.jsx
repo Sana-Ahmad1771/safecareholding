@@ -36,19 +36,21 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex-1 min-w-[190px] lg:max-w-[20%]"
         >
-         <a href="/">
-           <Image
-            src="/assets/Logo.png"
-            alt="Logo"
-            width={130}
-            height={40}
-            className="mb-5 w-32"
-             priority 
-          />
-         </a>
+          <a href="/">
+            <Image
+              src="/assets/Logo.png"
+              alt="Logo"
+              width={130}
+              height={40}
+              className="mb-5 w-32"
+              priority
+            />
+          </a>
           <p className="mb-6 text-[16px]">
-            We are many variations of the passages available but the majoro have
-            suffered alteration injected.
+            Leading manufacturer of surgical procedure kits, PPE, and medical
+            consumables from our advanced facilities in Abu Dhabi. Your trusted
+            partner for healthcare supply chain solutions across the Middle
+            East.
           </p>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
@@ -173,7 +175,7 @@ const Footer = () => {
         className="px-5 lg:px-32 xl:px-40 border-t border-gray-200 py-6 bg-[#F5F5F5] flex flex-col lg:flex-row justify-between items-center text-center gap-2"
       >
         <p>
-          © CareMedicalTrading. All rights reserved {new Date().getFullYear()}
+          © Safecare Holding. All rights reserved {new Date().getFullYear()}
         </p>
         <p className="text-wrap">Privacy Policy | Terms & Conditions</p>
       </motion.div>

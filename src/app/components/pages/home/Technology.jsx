@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaBullhorn, FaUsers, FaLaptopCode, FaPaintBrush, FaMobileAlt, FaNetworkWired } from "react-icons/fa";
 
 const TechnologyGrid = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -11,68 +12,72 @@ const TechnologyGrid = () => {
       id: 1,
       title: "Digital Marketing",
       description:
-        "Boosting your brand visibility with SEO, SEM, and content strategies that drive results.",
+        "Boost your brand visibility with SEO, SEM, and performance-driven campaigns.",
+      icon: <FaBullhorn size={22} className="text-primary" />,
     },
     {
       id: 2,
       title: "Social Media Management",
       description:
-        "Managing and growing your social presence through engaging posts, campaigns, and analytics.",
+        "Grow your social presence with engaging posts, campaigns, and analytics.",
+      icon: <FaUsers size={22} className="text-primary" />,
     },
     {
       id: 3,
       title: "Website Development",
       description:
-        "Building fast, secure, and responsive websites tailored to your business goals.",
+        "Build fast, secure, and responsive websites tailored to your business goals.",
+      icon: <FaLaptopCode size={22} className="text-primary" />,
     },
     {
       id: 4,
       title: "Graphic Designing",
       description:
-        "Creating impactful visuals, logos, and branding assets that tell your story.",
+        "Impactful visuals, logos, and branding assets that tell your story.",
+      icon: <FaPaintBrush size={22} className="text-primary" />,
     },
     {
       id: 5,
       title: "Mobile App Development",
       description:
-        "Designing and developing user-friendly mobile apps for iOS and Android platforms.",
+        "Design and develop user-friendly apps for iOS and Android platforms.",
+      icon: <FaMobileAlt size={22} className="text-primary" />,
     },
     {
       id: 6,
       title: "Networking & Hosting",
       description:
-        "Providing reliable hosting solutions and secure networking infrastructure for businesses.",
+        "Reliable hosting and secure networking infrastructure for modern businesses.",
+      icon: <FaNetworkWired size={22} className="text-primary" />,
     },
   ];
 
   return (
-    <section className="relative min-h-screen bg-gray-7/20 py-16 px-6 lg:px-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto pt-20">
+    <section className="relative min-h-screen bg-gray-50 py-16 px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto pt-10">
         {/* Header */}
         <motion.div
           className="text-center space-y-5 mb-14"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-semibold text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug bg-gradient-to-r text-dark-2 bg-clip-text mb-6">
-            Digital Transformation Services
+          <h2 className="font-bold text-2xl md:text-3xl lg:text-[38px] text-dark-2">
+            Digital Services
           </h2>
           <div className="flex justify-center">
-            {/* Divider */}
             <motion.div
-              className="mx-auto lg:mx-0 w-20 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-0.5 bg-gray-4"
+              className="w-24 h-1 bg-primary rounded-full"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             />
           </div>
-          <p className="text-gray-500 text-lg sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto">
-            Comprehensive technology solutions that power modern healthcare
-            organizations with digital marketing, custom software development,
-            and IT infrastructure.
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Comprehensive technology solutions that empower healthcare
+            organizations through digital marketing, software development, and IT infrastructure.
           </p>
         </motion.div>
 
@@ -81,41 +86,33 @@ const TechnologyGrid = () => {
           {technologyItems.map((item, index) => (
             <motion.div
               key={item.id}
-              className={`relative group cursor-pointer transition-all duration-300 transform ${
-                activeItem === item.id ? "scale-[1.03]" : "hover:scale-105"
+              className={`relative group cursor-pointer transition-all duration-300 ${
+                activeItem === item.id ? "shadow-lg -translate-y-1" : "hover:shadow-lg hover:-translate-y-1"
               }`}
               onMouseEnter={() => setActiveItem(item.id)}
               onMouseLeave={() => setActiveItem(null)}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               {/* Card */}
-              <div className="bg-white backdrop-blur-xl rounded-2xl p-8 border border-gray-200 hover:border-primary/50 transition-all duration-300 shadow-md hover:shadow-xl h-full">
-                {/* Icon Placeholder */}
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-xl">
-                    {item.title.charAt(0)}
-                  </span>
+              <div className="bg-white rounded-xl p-8 border border-gray-200 h-full flex flex-col">
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  {item.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg md:text-xl font-semibold text-dark-2 mb-3 transition-colors duration-300">
+                <h3 className="text-lg md:text-xl font-semibold text-dark-2 mb-3">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   {item.description}
                 </p>
-
-                {/* Hover overlay */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 to-primary-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
-
-              {/* Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-20 to-primary blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10" />
             </motion.div>
           ))}
         </div>

@@ -123,9 +123,9 @@ function AnimatedNumber({ value, duration = 2000, className, animationsEnabled =
 
 const QualityProducts = () => {
   const stats = [
-    { value: "500+", label: "Products" },
-    { value: "50+", label: "Partners" },
-    { value: "10K+", label: "Customers" },
+    { value: "500+", label: "Medical Products" },
+    { value: "50+", label: "Healthcare  Partners" },
+    { value: "10K+", label: "Surgical Kits" },
     { value: "15+", label: "Years Experience" },
   ];
 
