@@ -1,6 +1,4 @@
 import Header from './components/common/Header.jsx';
-import AboutUs from './components/pages/home/StrategicApproach.jsx';
-import Hero from './components/pages/home/Hero.jsx';
 import TrustedBrands from './components/pages/home/TrustedBrands.jsx';
 import OurHealthcare from './components/pages/home/OurBrands.jsx';
 import QualityProducts from './components/pages/home/QualityProducts.jsx';
@@ -15,15 +13,13 @@ import Solutions from './components/pages/home/Solutions.jsx';
 import ReadyToPartner from './components/pages/home/ReadyToPartner.jsx';
 import Gallery from './components/pages/home/Gallery.jsx';
 import Milestones from './components/pages/home/Milestones.jsx';
-// import Testing from './components/pages/home/testing.jsx';
+
 
 export default function Home() {
   return (
     <>
     <Header />
     <HeroSection/>
-    {/* <Hero /> */}
-
     <TrustedBrands />
     <About />
     <Solutions />
@@ -32,13 +28,11 @@ export default function Home() {
     <QualityProducts />
     <ProductsServices />
     <SpecialServices />
-    {/* <Testing /> */}
      <Milestones />
     <TechnologyGrid />
     <Gallery />
     <ReadyToPartner />
     <Footer />
-    
     </>
   );
 }

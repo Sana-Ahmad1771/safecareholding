@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   FaRocket,
@@ -18,53 +18,70 @@ const Milestones = () => {
     {
       year: "2008",
       title: "Medical Manufacturing Foundation",
-      description: "Established first manufacturing facility in Abu Dhabi specializing in medical components.",
+      description:
+        "Established first manufacturing facility in Abu Dhabi specializing in medical components.",
       icon: <FaRocket className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2012",
       title: "Surgical Kits Division",
-      description: "Launched surgical procedure kits production with advanced cleanroom facilities.",
+      description:
+        "Launched surgical procedure kits production with advanced cleanroom facilities.",
       icon: <FaSyringe className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2015",
       title: "Quality Certification",
-      description: "Achieved ISO 13485 certification for medical device manufacturing standards.",
+      description:
+        "Achieved ISO 13485 certification for medical device manufacturing standards.",
       icon: <FaAward className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2018",
       title: "Multi-Brand Expansion",
-      description: "Expanded to 6 specialized companies under Safecare manufacturing ecosystem.",
+      description:
+        "Expanded to 6 specialized companies under Safecare manufacturing ecosystem.",
       icon: <FaBoxes className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2020",
       title: "PPE Production Scale-up",
-      description: "Rapidly scaled PPE manufacturing to meet critical healthcare demands.",
+      description:
+        "Rapidly scaled PPE manufacturing to meet critical healthcare demands.",
       icon: <FaShieldAlt className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2023",
       title: "Sterilization Facility",
-      description: "Commissioned advanced EO and gamma sterilization services.",
+      description:
+        "Commissioned advanced EO and gamma sterilization services.",
       icon: <FaIndustry className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
     {
       year: "2024",
       title: "Regional Leadership",
-      description: "Became leading medical manufacturer in GCC region with expanded distribution.",
+      description:
+        "Became leading medical manufacturer in GCC region with expanded distribution.",
       icon: <FaGlobe className="text-2xl" />,
       gradient: "from-primary to-accent",
     },
   ];
+
+  // ✅ Autoplay logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveMilestone((prev) =>
+        prev === milestones.length - 1 ? 0 : prev + 1
+      );
+    }, 4000); // autoplay every 4 seconds
+    return () => clearInterval(interval);
+  }, [milestones.length]);
 
   return (
     <section
@@ -87,7 +104,7 @@ const Milestones = () => {
           </motion.div>
 
           <h2 className="font-semibold text-left text-2xl md:text-3xl lg:text-[38px] xl:text-5xl leading-snug text-dark-2 mb-6">
-            Manufacturing{" "} <br />
+            Manufacturing <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
               Excellence <br /> Timeline
             </span>
